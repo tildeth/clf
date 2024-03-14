@@ -4,15 +4,8 @@
   --bg-overlay: rgb(255, 255, 255, 0.15);
   --primary-text-color: #f0eeec;
   --secondary-text-color: #f66ac4;
-  --button-deafult: radial-gradient(
-    circle,
-    #d1e7ae,
-    #f66ac4,
-    #9d78ed,
-    #2cbebc,
-    #d1e7ae
-  );
-  --button-hover: #;
+  --button-deafult: radial-gradient(circle, #d1e7ae, #f66ac4, #9d78ed, #2cbebc);
+  --button-hover: rgba(2, 181, 183, 0.5);
   --button-active: linear-gradient(
     to left,
     #02b3b1,

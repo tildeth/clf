@@ -6,11 +6,19 @@ const {text} = Astro.props;
 
 <style>
     button{
-        color: var( --primary-text-color);
-        background-color: var(--bg-overlay);
         padding: 20px;
-        background-image: var(--button-deafult);
-        border-radius: 22px;
+        border: 2px solid  radial-gradient(circle, #d1e7ae, #f66ac4, #9d78ed, #2cbebc) /* var(--button-deafult) */;
+        background-color: var(--bg-overlay);
+        color: var( --primary-text-color);
+        border-radius: 25px;
+    }
+
+    button:hover{
+        box-shadow: 4px 2px 4px rgba(2, 181, 183, 0.5);
+    }
+
+    button:active{
+        background-color: var(--button-activ);
     }
 </style>
 
