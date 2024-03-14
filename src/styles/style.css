@@ -1,0 +1,12 @@
+/* Variable farver*/
+:root{
+    --bg-color: #00071d;
+    --bg-overlay: rgb(255,255,255, 0.15);
+    --primary-text-color: #f0eeec;
+    --secondary-text-color: #f66ac4;
+    --button-deafult: #;
+    --button-hover: #;
+    --button-active: linear-gradient(to left, #02b3b1, #1d87c9, #8a60f4, #d851ac, #ce4984, #e7525d);
+    --link-hover: linear-gradient(to left, #02b3b1, #f66ac4);
+    --link-visited: #f66ac4;
+}
