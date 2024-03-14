@@ -10,3 +10,8 @@
     --link-hover: linear-gradient(to left, #02b3b1, #f66ac4);
     --link-visited: #f66ac4;
 }
+
+body{
+    background-color: var(--bg-color);
+    color: var(--primary-text-color);
+}
