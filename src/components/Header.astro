@@ -3,24 +3,23 @@ import Knap from "../components/Knap.astro";
 ---
 
 <header>
-  <img src="" alt="" />
-
   <nav class="flexNav">
+    <a href="/"><img src="/icon/Logo.svg" alt="Logo" /></a>
     <ul class="flexUl">
       <li><a href="/"><Knap text="SAMRBEJDE" /></a></li>
-      <li><a href="#"><Knap text="KORT" /></a></li>
-      <li><a href="/src/pages/program.astro"><Knap text="PROGRAM" /></a></li>
+      <li><a href="/"><Knap text="KORT" /></a></li>
+      <li><a href="/program"><Knap text="PROGRAM" /></a></li>
       <li><a href="/"><Knap text="OM OS" /></a></li>
       <li><a href="/"><Knap text="FOTOKONKURRENCE" /></a></li>
     </ul>
     <div>February 2 - 25/2024 København</div>
   </nav>
-
-  
 </header>
 
 <style>
   nav {
+    justify-content: center;
+    align-items: center;
   }
   ul {
     list-style: none;
@@ -28,24 +27,24 @@ import Knap from "../components/Knap.astro";
     padding: 10px;
     border-radius: 25px;
     background-color: var(--bg-overlay);
+    justify-content: center;
+    align-items: center;
   }
   a {
-    font-family: "#";
+    font-family: "circular";
     font-size: 16px;
   }
 
-  div{
-    align-content: center;
+  div {
   }
 
   .flexUl {
     display: flex;
-    gap: 0.7rem;
+    gap: 1rem;
   }
   .flexNav {
     display: flex;
-    gap: 1.5rem;
-
+    gap: 13rem; /* Dette skal ændres, da det ikke er responsivt */
   }
 </style>
 
