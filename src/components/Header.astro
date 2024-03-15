@@ -1,5 +1,6 @@
 ---
 import Knap from "../components/Knap.astro";
+import SprogKnap from "./Sprog_knap.astro";
 ---
 
 <header>
@@ -12,7 +13,11 @@ import Knap from "../components/Knap.astro";
       <li><a href="/"><Knap text="OM OS" /></a></li>
       <li><a href="/"><Knap text="FOTOKONKURRENCE" /></a></li>
     </ul>
-    <div>February 2 - 25/2024 København</div>
+
+    <div>
+      <SprogKnap />
+      <div>February 2 - 25/2024 København</div>
+    </div>
   </nav>
 </header>
 
