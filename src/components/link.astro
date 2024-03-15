@@ -1,0 +1,19 @@
+---
+const {link, text} = Astro.props;
+---
+
+<a href="{link}">{text}</a>
+
+<style>
+    a{
+        color: var(--primary-text-color);
+    }
+
+    a:hover{
+        color: var(--link-hover);
+    }
+
+    a:active{
+        color: var(--link-visited);
+    }
+</style>
