@@ -2,7 +2,6 @@
 const { text } = Astro.props;
 ---
 
-<button>{text}</button>
 <button>
   <div class="inner">
     {text}
@@ -11,7 +10,7 @@ const { text } = Astro.props;
 
 <style>
   button {
-    padding: 0.2rem;
+    padding: 0.1rem;
     position: relative;
     background: var(--button-deafult);
     border-radius: 22px;
@@ -19,19 +18,11 @@ const { text } = Astro.props;
   }
 
   .inner {
-    background: #222;
-    color: white;
-    padding: 20px;
+    background: var(--bg-knap);
+    color: var(--primary-text-color);
+    padding: 0.65rem;
     border-radius: 20px;
   }
-  /* button{
-        padding: 20px;
-        border: 2px solid  radial-gradient(circle, #d1e7ae, #f66ac4, #9d78ed, #2cbebc) /* var(--button-deafult) */;
-        background-color: var(--bg-overlay);
-        padding: 20px;
-        border-color: var(--button-deafult);
-        border-radius: 22px;
-    }
 </style>
 
 <script></script>
