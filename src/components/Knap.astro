@@ -1,17 +1,39 @@
 ---
-const {text} = Astro.props;
+const { text } = Astro.props;
 ---
 
 <button>{text}</button>
+<button>
+  <div class="inner">
+    {text}
+  </div>
+</button>
 
 <style>
-    button{
+  button {
+    padding: 0.2rem;
+    position: relative;
+    background: var(--button-deafult);
+    border-radius: 22px;
+    border: none;
+  }
+
+  .inner {
+    background: #222;
+    color: white;
+    padding: 20px;
+    border-radius: 20px;
+  }
+  /* button{
         color: var( --primary-text-color);
         background-color: var(--bg-overlay);
         padding: 20px;
         border-color: var(--button-deafult);
         border-radius: 22px;
-    }
+        border:none;
+        min-width: 50px;
+        outline: 2px solid var(--button-deafult);
+    } */
 </style>
 
 <script></script>
