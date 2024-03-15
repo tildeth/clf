@@ -25,6 +25,14 @@ const { text } = Astro.props;
     padding-right: 0.9rem;
     border-radius: 20px;
   }
+
+  button:hover {
+    box-shadow: 4px 2px 4px var(--button-hover);
+  }
+
+  button:active .inner {
+    background: var(--button-active);
+  }
 </style>
 
 <script></script>
