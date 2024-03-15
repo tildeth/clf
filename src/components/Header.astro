@@ -1,37 +1,41 @@
 ---
+import Knap from "../components/Knap.astro";
 ---
 
 <header>
-    <img src="" alt="">
+  <img src="" alt="" />
 
-    <nav class="flex">
-        <a href="/">SAMRBEJDE</a>
-        <a href="#">KORT</a>
-        <a href="/src/pages/program.astro">PROGRAM</a>
-        <a href="/">OM OS</a>
-        <a href="/">FOTOKONKURRENCE</a>
-    </nav>
+  <nav>
+    <ul class="flex">
+      <li><a href="/"><Knap text="SAMRBEJDE" /></a></li>
+      <li><a href="#"><Knap text="KORT" /></a></li>
+      <li><a href="/src/pages/program.astro"><Knap text="PROGRAM" /></a></li>
+      <li><a href="/"><Knap text="OM OS" /></a></li>
+      <li><a href="/"><Knap text="FOTOKONKURRENCE" /></a></li>
+    </ul>
+  </nav>
 
-    <div>February 2 - 25/2024
-        København</div>
+  <div>February 2 - 25/2024 København</div>
 </header>
 
 <style>
-    nav{
-        padding: 10px;
-        background-color: var(--bg-overlay);
-        border-radius: 25px;
-    }
+  nav {
+  }
+  ul {
+    list-style: none;
+    padding: 10px;
+    border-radius: 25px;
+    background-color: var(--bg-overlay);
+  }
+  a {
+    font-family: "#";
+    font-size: 16px;
+  }
 
-    a{
-        font-family: "#";
-        font-size: 16px;
-
-    }
-    
-    .flex{
-        display: flex;
-    }
+  .flex {
+    display: flex;
+    gap: 1rem;
+  }
 </style>
 
 <script></script>
