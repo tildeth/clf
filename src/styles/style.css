@@ -9,6 +9,7 @@
     --button-active: linear-gradient(to left, #02b3b1, #1d87c9, #8a60f4, #d851ac, #ce4984, #e7525d);
     --link-hover: linear-gradient(to left, #02b3b1, #f66ac4);
     --link-visited: #f66ac4;
+    --nyhedsbrev:#2E7DC8;
 }
 
 body{
