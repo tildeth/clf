@@ -5,17 +5,18 @@ import Knap from "../components/Knap.astro";
 <header>
   <img src="" alt="" />
 
-  <nav>
-    <ul class="flex">
+  <nav class="flexNav">
+    <ul class="flexUl">
       <li><a href="/"><Knap text="SAMRBEJDE" /></a></li>
       <li><a href="#"><Knap text="KORT" /></a></li>
       <li><a href="/src/pages/program.astro"><Knap text="PROGRAM" /></a></li>
       <li><a href="/"><Knap text="OM OS" /></a></li>
       <li><a href="/"><Knap text="FOTOKONKURRENCE" /></a></li>
     </ul>
+    <div>February 2 - 25/2024 København</div>
   </nav>
 
-  <div>February 2 - 25/2024 København</div>
+  
 </header>
 
 <style>
@@ -33,9 +34,18 @@ import Knap from "../components/Knap.astro";
     font-size: 16px;
   }
 
-  .flex {
+  div{
+    align-content: center;
+  }
+
+  .flexUl {
     display: flex;
     gap: 0.7rem;
+  }
+  .flexNav {
+    display: flex;
+    gap: 1.5rem;
+
   }
 </style>
 
