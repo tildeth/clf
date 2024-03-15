@@ -16,3 +16,8 @@ body {
   background-color: var(--bg-color);
   color: var(--primary-text-color);
 }
+
+@font-face {
+    font-family: "circular";
+    src: url("../fonts/circular-std-medium-500-webfont.woff2");
+}
