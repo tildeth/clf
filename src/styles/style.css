@@ -1,17 +1,4 @@
 /* Variable farver*/
-<<<<<<< HEAD
-:root{
-    --bg-color: #00071d;
-    --bg-overlay: rgb(255,255,255, 0.15);
-    --primary-text-color: #f0eeec;
-    --secondary-text-color: #f66ac4;
-    --button-deafult: linear-gradient(45deg, #D1E7AE, #F66AC4, #9D78ED, #2CBEBC, #D1E7AE);
-    --button-hover: #;
-    --button-active: linear-gradient(to left, #02b3b1, #1d87c9, #8a60f4, #d851ac, #ce4984, #e7525d);
-    --link-hover: linear-gradient(to left, #02b3b1, #f66ac4);
-    --link-visited: #f66ac4;
-    --nyhedsbrev:#2E7DC8;
-=======
 :root {
   --bg-color: #00071d;
   --bg-overlay: rgb(255, 255, 255, 0.15);
@@ -37,7 +24,7 @@
   );
   --link-hover: linear-gradient(to left, #02b3b1, #f66ac4);
   --link-visited: #f66ac4;
->>>>>>> 9159ad975e5c8c33127aebde50d3b032c6f61ccf
+  --nyhedsbrev: #2e7dc8;
 }
 
 body {
