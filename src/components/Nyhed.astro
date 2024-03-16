@@ -15,8 +15,8 @@
   </p>
 </article>
 
-<div id="toggleButton">
-  <p class="vertical-text" >Hold dig opdateret</p>
+<div id=toggleButton class="hold_dig">
+  <p class=vertical-text>Hold dig opdateret</p>
 </div>
 
 <style>
@@ -26,6 +26,11 @@
     border-radius: 22px;
     max-width: 500px;
     min-height: 400px;
+    margin-left: 490px;
+  }
+
+  .hold_dig{
+    padding-left: 1340px;
   }
   h2 {
     padding: 10px;
@@ -53,6 +58,10 @@
     
   }
 
+  div{
+    margin-right: 0px;
+  }
+
   .tilmeld{
     padding-left: 300px;
   }
@@ -68,6 +77,7 @@
     background-color: var(--nyhedsbrev);
     padding: 5px;
     border-radius: 22px;
+    position: fixed;
   }
   .hidden {
   display: none; /* Skjuler elementet som standard */
@@ -80,4 +90,5 @@
   var hiddenContent = document.getElementById("hiddenContent");
   hiddenContent.classList.toggle("hidden"); // Toggler klassen for å vise eller skjule innholdet
 });
+
 </script>
