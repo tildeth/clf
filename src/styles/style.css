@@ -10,6 +10,7 @@
     --link-hover: linear-gradient(to left, #02b3b1, #f66ac4);
     --link-visited: #f66ac4;
     --bg-knap: #212739;
+    --nyhedsbrev: #2E7DC8;
 }
 
 body {
