@@ -1,10 +1,10 @@
 ---
 import Knap from "../components/Knap.astro";
-import SprogKnap from "./Sprog_knap.astro";
+import Sprog_knap from "../components/Sprog_knap.astro";
 ---
 
 <header>
-  <nav class="flexNav">
+  <nav id="deskNav" class="flexNav">
     <a href="/"><img src="/icon/Logo.svg" alt="Logo" /></a>
     <ul class="flexUl">
       <li><a href="/"><Knap text="SAMARBEJDE" /></a></li>
@@ -15,7 +15,7 @@ import SprogKnap from "./Sprog_knap.astro";
     </ul>
 
     <div class="grid">
-      <SprogKnap />
+      <Sprog_knap />
       <div>February 2 - 25/2024</div>
       <div>København</div>
     </div>

@@ -1,16 +1,31 @@
 /* Variable farver*/
-:root{
-    --bg-color: #00071d;
-    --bg-overlay: rgb(255,255,255, 0.15);
-    --primary-text-color: #f0eeec;
-    --secondary-text-color: #f66ac4;
-    --button-deafult: linear-gradient(45deg, #D1E7AE, #F66AC4, #9D78ED, #2CBEBC, #D1E7AE);
-    --button-hover: rgba(2, 181, 183, 0.5);
-    --button-active: linear-gradient(to left, #02b3b1, #1d87c9, #8a60f4, #d851ac, #ce4984, #e7525d);
-    --link-hover: linear-gradient(to left, #02b3b1, #f66ac4);
-    --link-visited: #f66ac4;
-    --bg-knap: #212739;
-    --nyhedsbrev: #2E7DC8;
+:root {
+  --bg-color: #00071d;
+  --bg-overlay: rgb(255, 255, 255, 0.15);
+  --primary-text-color: #f0eeec;
+  --secondary-text-color: #f66ac4;
+  --button-deafult: linear-gradient(
+    45deg,
+    #d1e7ae,
+    #f66ac4,
+    #9d78ed,
+    #2cbebc,
+    #d1e7ae
+  );
+  --button-hover: rgba(2, 181, 183, 0.5);
+  --button-active: linear-gradient(
+    to left,
+    #02b3b1,
+    #1d87c9,
+    #8a60f4,
+    #d851ac,
+    #ce4984,
+    #e7525d
+  );
+  --link-hover: linear-gradient(to left, #02b3b1, #f66ac4);
+  --link-visited: #f66ac4;
+  --bg-knap: #212739;
+  --nyhedsbrev: #2e7dc8;
 }
 
 body {
@@ -19,42 +34,60 @@ body {
 }
 
 @font-face {
-    font-family: "circular";
-    src: url("../fonts/circular-std-medium-500-webfont.woff2");
+  font-family: "circular";
+  src: url("../fonts/circular-std-medium-500-webfont.woff2");
 }
 
-h1{
-  font-family: 'circular';
+h1 {
+  font-family: "circular";
   font-size: 90px;
-  color: #F0EEEC;
+  color: #f0eeec;
   max-width: 65ch;
 }
 
-h2{
-  font-family: 'circular';
+h2 {
+  font-family: "circular";
   font-size: 60px;
-  color: #F0EEEC;
+  color: #f0eeec;
   max-width: 65ch;
 }
 
-h3{
-  font-family: 'circular';
+h3 {
+  font-family: "circular";
   font-size: 40px;
-  color: #F0EEEC;
+  color: #f0eeec;
   max-width: 65ch;
 }
 
-h4{
-  font-family: 'circular';
+h4 {
+  font-family: "circular";
   font-size: 30px;
-  color: #F0EEEC;
+  color: #f0eeec;
   max-width: 65ch;
 }
 
-p{
-  font-family: 'circular';
+p {
+  font-family: "circular";
   font-size: 22px;
-  color: #F0EEEC;
+  color: #f0eeec;
   line-height: 27px;
   max-width: 65ch;
+}
+
+/* ------------------ WEB -------------------- */
+@media screen and (min-width: 700px) {
+  #mobilNav,
+  #mobilTop,
+  #footerMobil {
+    display: none;
+  }
+}
+
+/* ---------------- MOBIL --------------- */
+@media screen and (max-width: 700px) {
+  #deskNav,
+  #deskFooter,
+  #deskTop {
+    display: none;
+  }
 }

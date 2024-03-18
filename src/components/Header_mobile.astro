@@ -3,12 +3,11 @@ import Sprog_knap from "../components/Sprog_knap.astro";
 import Burger from "../components/Burger.astro";
 ---
 
-<header>
+<header id="mobilnav">
   <nav class="flexNav">
     <Sprog_knap />
     <a href="/"><img src="/icon/Logo.svg" alt="Logo" /></a>
     <Burger />
-  
   </nav>
 </header>
 
@@ -29,7 +28,7 @@ import Burger from "../components/Burger.astro";
   }
   .flexNav {
     display: flex;
-    gap: 13rem; /* Dette skal ændres, da det ikke er responsivt */
+    gap: 11%; /* Dette skal ændres, da det ikke er responsivt */
   }
 </style>
 
