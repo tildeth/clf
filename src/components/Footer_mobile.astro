@@ -8,28 +8,39 @@
           <a href="">Ruter</a>
           <li><a href="">Events</a></li>
           <li><a href="">Guidede ture</a></li>
-        </li>
+        <ul/>
         <h3>Kontakt</h3>
         <a href="">info@copenhagenlightfestival.org</a>
         <p>+45 2555 6604</p>
         <a href="">Om os</a>
         <div class="flex">
-          <a href=""><img src="icon/icon_instagram.svg" alt="" /></a>
-          <a href=""><img src="icon/icon_facebook.svg" alt="" /></a>
-          <a href=""><img src="icon/icon_youtube.svg" alt="" /></a>
+          <a href="" class="insta"
+            ><img src="icon/icon_instagram.svg" alt="" /></a
+          >
+          <a href="" class="fb"><img src="icon/icon_facebook.svg" alt="" /></a>
+          <a href="" class="yt"><img src="icon/icon_youtube.svg" alt="" /></a>
         </div>
         <h4>©COPENHAGEN LIGHT FESTIVAL</h4>
-      </a>
+    </section>
 
       <style>
         section {
           align-items: center;
+          text-align: center;
         }
-        h3 {
+        h3,
+        h4 {
           color: var(--primary-text-color);
         }
-        a {
-          color: var(--primary-text-color);
+a{
+    color: var(--primary-text-color);
+}
+        a:visited {
+          color: var(--link-visited);
+        }
+        a:hover {
+          /* color: var(--link-hover) */
+          color: aqua;
         }
         li {
           list-style: none;
@@ -37,11 +48,13 @@
         .flex a {
           text-decoration: none;
         }
-
-        img: hover{
-
+        .insta img:hover {
+          background: url("icon/icon_instahover.svg") no-repeat;
+        }
+        .fb img:hover {
+          background: url("icon/icon_fbhover.svg") no-repeat;
+        }
+        .yt img:hover {
+          background: url("icon/icon_ythover.svg") no-repeat;
         }
       </style>
-    </li>
-  </ul>
-</section>
