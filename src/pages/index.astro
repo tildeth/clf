@@ -1,8 +1,10 @@
 ---
 import "../styles/style.css";
-import Knap from "../components/Knap.astro";
+import Card from "../components/Card.astro";
 import Header from "../components/Header.astro";
 import Nyhed from "../components/Nyhed.astro";
+import Knap from "../components/Knap.astro";
+import Footer from "../components/Footer.astro";
 ---
 
 <html lang="en">
@@ -15,8 +17,25 @@ import Nyhed from "../components/Nyhed.astro";
   </head>
   <body>
     <Header />
-    <h1>Astro</h1>
-    <Knap text="klik her" />
     <Nyhed />
+    <h2>February 2 - 25/2024</h2>
+    <h1>Copenhagen Lightfestival</h1>
+    <h3>Entrance free festival</h3>
+
+    <Card />
+    <Card />
+
+    <div>
+      <img src="" alt="" />
+      <h4>Lys værker</h4>
+      <p>
+        Copenhagen Light Festival er en årligt tilbagevendende festival for lys,
+        der transformerer det stille og kolde vintermørke til en særlig fejring
+        af lyskunst, lysdesign og lysende oplevelser midt i København.
+      </p>
+      <Knap />
+    </div>
+
+    <Footer />
   </body>
 </html>
