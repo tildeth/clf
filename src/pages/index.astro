@@ -1,10 +1,12 @@
 ---
 import "../styles/style.css";
-import Card from "../components/Card.astro";
+import Knap from "../components/Knap.astro";
 import Header from "../components/Header.astro";
 import Nyhed from "../components/Nyhed.astro";
 import L1 from "../components/lightbeams/L1.astro";
 import Bg_icon from "../components/Bg_icon.astro";
+import Topknap from "../components/Topknap.astro";
+import TopknapMobile from "../components/Topknap_mobile.astro";
 ---
 
 <html lang="en">
@@ -17,10 +19,10 @@ import Bg_icon from "../components/Bg_icon.astro";
   </head>
   <body>
     <Header />
-    <h1>Astro</h1>
-    <Knap text="klik her" />
-		<Bg_icon/>
-		<L1 />
+    <!--    <Knap text="klik her" /> -->
+    <Bg_icon />
+    <L1 />
     <Nyhed />
+    <Topknap />
   </body>
 </html>
