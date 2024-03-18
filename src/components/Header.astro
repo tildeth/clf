@@ -4,14 +4,17 @@ import SprogKnap from "../components/Sprog_knap.astro";
 ---
 
 <header>
+  <!-- <a href="/"><Knap text="Fjern" /></a> -->
   <nav class="flexNav">
     <a href="/"><img src="/icon/Logo.svg" alt="Logo" /></a>
     <ul class="flexUl">
-      <li><a href="/"><Knap text="SAMARBEJDE" /></a></li>
-      <li><a href="/"><Knap text="KORT" /></a></li>
-      <li><a href="/program"><Knap text="PROGRAM" /></a></li>
-      <li><a href="/"><Knap text="OM OS" /></a></li>
-      <li><a href="/"><Knap text="FOTOKONKURRENCE" /></a></li>
+      <li data-link="/"><Knap text="SAMARBEJDE" /></li>
+      <li data-link="/"><Knap text="KORT" /></li>
+      <li data-link="program">
+        <Knap text="PROGRAM" />
+      </li>
+      <li data-link="/"><a href="/"><Knap text="OM OS" /></a></li>
+      <li data-link="/"><a href="/"><Knap text="FOTOKONKURRENCE" /></a></li>
     </ul>
 
     <div class="grid">
@@ -49,11 +52,23 @@ import SprogKnap from "../components/Sprog_knap.astro";
   .flexUl {
     display: flex;
     gap: 1rem;
+    z-index: 100;
   }
   .flexNav {
     display: flex;
-    gap: 16%; /* Dette skal ændres, da det ikke er responsivt */
+    gap: 16%;
   }
 </style>
 
-<script></script>
+<script>
+  
+  document.querySelectorAll(".flexUl li").forEach((item) => {
+    // console.log("ITE", item);
+
+    item.addEventListener("click", klikBtn);
+  });
+  function klikBtn(evt) {
+    console.log("SOMETHING", evt.currentTarget.dataset.link);
+    location.href = evt.currentTarget.dataset.link;
+  }
+</script>
