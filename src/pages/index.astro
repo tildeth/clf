@@ -1,21 +1,26 @@
 ---
+import "../styles/style.css";
 import Knap from "../components/Knap.astro";
+import Header from "../components/Header.astro";
+import Nyhed from "../components/Nyhed.astro";;
 import L1 from "../components/lightbeams/L1.astro";
 import Bg_icon from "../components/Bg_icon.astro";
 ---
  
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-		<Knap text="klik her" />
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Astro</title>
+  </head>
+  <body>
+    <Header />
+    <h1>Astro</h1>
+    <Knap text="klik her" />
 		<Bg_icon/>
 		<L1 />
-	</body>
+    <Nyhed />
+  </body>
 </html>

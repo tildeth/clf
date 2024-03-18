@@ -1,0 +1,94 @@
+---
+
+---
+
+<article  class="hidden" id="hiddenContent">
+  <h2>Tilmeld vores nyhedsbrev</h2>
+  <ul>
+    <li>Email</li>
+    <li class="tilmeld">Tilmeld</li>
+  </ul>
+  <hr />
+  <p class="opda">
+    Få opdatering på nyheder, event og meget andet både som gæst, kunstner eller
+    sponsor.
+  </p>
+</article>
+
+<div id=toggleButton class="hold_dig">
+  <p class=vertical-text>Hold dig opdateret</p>
+</div>
+
+<style>
+  /*   ------Tilmeld dig-------- */
+  article {
+    background-color: var(--nyhedsbrev);
+    border-radius: 22px;
+    max-width: 500px;
+    min-height: 400px;
+    margin-left: 490px;
+  }
+
+  .hold_dig{
+    padding-left: 1340px;
+  }
+  h2 {
+    padding: 10px;
+    padding-left: 100px;
+  }
+  p {
+    color: var(--primary-text-color);
+    max-width: 300px;
+    font-size: larger;
+  }
+
+  .opda{
+    padding-left: 100px;
+    padding-top: 30px;
+    font-size: x-large;
+  }
+
+  hr {
+    max-width: 400px;
+  }
+
+  li {
+    list-style: none;
+    display: inline-block;
+    
+  }
+
+  div{
+    margin-right: 0px;
+  }
+
+  .tilmeld{
+    padding-left: 300px;
+  }
+  
+  li{
+    padding-left: 10px;
+  }
+  /*   -------HOLD DIG OPDATERET-------- */
+  .vertical-text {
+    writing-mode: vertical-rl; /* Dette vil rotere teksten vertikalt fra høyre til venstre */
+    text-orientation: mixed; /* Dette er for å sikre at teksten leses fra bunnen til toppen */
+    white-space: nowrap; /* Dette hindrer teksten i å bryte linjer */
+    background-color: var(--nyhedsbrev);
+    padding: 5px;
+    border-radius: 22px;
+    position: fixed;
+  }
+  .hidden {
+  display: none; /* Skjuler elementet som standard */
+ /*  transition: opacity 0.5s ease; /* Legger til en overgang for jevn animasjon */ */
+}
+</style>
+
+<script>
+  document.getElementById("toggleButton").addEventListener("click", function() {
+  var hiddenContent = document.getElementById("hiddenContent");
+  hiddenContent.classList.toggle("hidden"); // Toggler klassen for å vise eller skjule innholdet
+});
+
+</script>
