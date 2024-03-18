@@ -1,0 +1,38 @@
+---
+import "../../styles/style.css"
+---
+
+<article>
+    <div class="line1_container">
+    <div class="line1"></div>
+    </div>
+</article>
+
+<style>
+    .line1_container{
+        position: relative;
+        width: 250px;
+        height:3px;
+        background-color: rgb(207, 234, 163, 0.5);
+        filter: blur(2px);
+        overflow: hidden;
+        margin: 10%;
+    }
+    .line1{
+    position: absolute;
+    width: 50px;
+    height: 5px;
+    background-color: rgb(207, 234, 163);
+    animation: moveSquare 2s linear infinite; 
+    
+    }
+
+    @keyframes moveSquare {
+  0% {
+    left: 0; /* Startpositionen til venstre */
+  }
+  100% {
+    left: 250px; /* Slutpositionen til højre */
+  }
+}
+</style>
