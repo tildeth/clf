@@ -10,6 +10,7 @@
     --link-hover: linear-gradient(to left, #02b3b1, #f66ac4);
     --link-visited: #f66ac4;
     --bg-knap: #212739;
+    --nyhedsbrev: #2E7DC8;
 }
 
 body {
@@ -22,3 +23,38 @@ body {
     src: url("../fonts/circular-std-medium-500-webfont.woff2");
 }
 
+h1{
+  font-family: 'circular';
+  font-size: 90px;
+  color: #F0EEEC;
+  max-width: 65ch;
+}
+
+h2{
+  font-family: 'circular';
+  font-size: 60px;
+  color: #F0EEEC;
+  max-width: 65ch;
+}
+
+h3{
+  font-family: 'circular';
+  font-size: 40px;
+  color: #F0EEEC;
+  max-width: 65ch;
+}
+
+h4{
+  font-family: 'circular';
+  font-size: 30px;
+  color: #F0EEEC;
+  max-width: 65ch;
+}
+
+p{
+  font-family: 'circular';
+  font-size: 22px;
+  color: #F0EEEC;
+  line-height: 27px;
+  max-width: 65ch;
+}
