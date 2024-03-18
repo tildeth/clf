@@ -1,11 +1,16 @@
 ---
 import "../styles/style.css";
+const { h1 } = Astro.props;
+const { h2 } = Astro.props;
+const { h3 } = Astro.props;
 ---
 
 <article>
-  <h2>February 2 - 25/2024</h2>
-  <h1>Copenhagen Lightfestival</h1>
-  <h3>Entrance free festival</h3>
+  <div class="overskifter">
+    <h2>{h2}</h2>
+    <h1>{h1}</h1>
+    <h3>{h3}</h3>
+  </div>
   <div class="bg_container">
     <div class="circle1"></div>
     <div class="circle2"></div>
@@ -15,29 +20,36 @@ import "../styles/style.css";
 </article>
 
 <style>
+  .overskifter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative; /* Legg til denne linjen */
+    z-index: 1; /* Endre z-index til 1 */
+  }
+
   h1 {
     position: absolute;
-    z-index: 5;
-    padding-top: 70px;
-    padding-left: 12%;
+    z-index: 4;
+    padding-top: 400px;
   }
-
   h2 {
     position: absolute;
-    z-index: 6;
-    padding-left: 31%;
+    z-index: 4;
+    padding-top: 200px;
   }
-
   h3 {
     position: absolute;
-    z-index: 5;
-    padding-top: 270px;
-    padding-left: 35%;
+    z-index: 4;
+    padding-top: 600px;
   }
+
   .bg_container {
     position: relative;
     width: 100%;
     height: auto;
+    z-index: 0;
   }
 
   .circle1 {
