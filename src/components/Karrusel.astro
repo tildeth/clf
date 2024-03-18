@@ -1,0 +1,82 @@
+---
+import "../styles/style.css"
+---
+
+<div class="carousel-container">
+    <div class="prev" onclick="prevSlide()">&#10094;</div>
+    <div class="carousel">
+      <div class="carousel-inner">
+        <div class="card">1</div>
+        <div class="card">2</div>
+        <div class="card">3</div>
+        <div class="card">4</div>
+        <div class="card">5</div>
+        <div class="card">6</div>
+        <div class="card">7</div>
+        <div class="card">8</div>
+        <div class="card">9</div>
+        <div class="card">10</div>
+      </div>
+    </div>
+    <div class="next" onclick="nextSlide()">&#10095;</div>
+  </div>
+  
+  
+  
+  <style>
+    .carousel-container {
+  display: flex;
+  align-items: center;
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  font-size: 24px;
+  padding: 1%;
+}
+
+.carousel {
+  flex: 1;
+  overflow: hidden;
+}
+
+.carousel-inner {
+  display: flex;
+}
+
+.card {
+  flex: 0 0 auto;
+  width: 300px; /* Juster bredden efter behov */
+  height: 450px; /* Juster højden efter behov */
+  background-image: url(../../public/img/321657152_1218208709048389_1728239013440717407_n.jpg);
+  margin-right: 10px; /* Tilføj mellemrum mellem kortene */;
+}
+
+  </style>
+
+  <script>
+   const carouselInner = document.querySelector('.carousel-inner');
+let counter = 0;
+
+function nextSlide() {
+  counter++;
+  if (counter > 9) counter = 0;
+  carouselInner.style.transform = `translateX(-${counter * 110}px)`; /* Juster bredden af kortet + margen efter behov */
+}
+
+function prevSlide() {
+  counter--;
+  if (counter < 0) counter = 9;
+  carouselInner.style.transform = `translateX(-${counter * 110}px)`; /* Juster bredden af kortet + margen efter behov */
+}
+
+carouselInner.addEventListener('wheel', function(event) {
+  if (event.deltaY > 0) {
+    nextSlide();
+  } else {
+    prevSlide();
+  }
+});
+  </script>
+  
