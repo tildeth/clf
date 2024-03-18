@@ -1,8 +1,8 @@
 ---
-const {text} = Astro.props;
+const { text } = Astro.props;
 ---
 
-<button>
+<button id="myButton">
   <div class="inner">
     {text}
   </div>
@@ -33,6 +33,19 @@ const {text} = Astro.props;
   button:active .inner {
     background: var(--button-active);
   }
+
+  .clicked {
+    background-color: var(--button-active);
+  }
 </style>
 
-<script></script>
+<script>
+  // Hent knap-elementet
+  var button = document.getElementById("myButton");
+
+  // Tilføj en eventlistener til klikbegivenheder
+  button.addEventListener("click", function () {
+    // Ændr farven på knappen
+    button.classList.add("clicked"); // Tilføj klasse til at ændre farven
+  });
+</script>
