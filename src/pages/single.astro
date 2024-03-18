@@ -1,6 +1,16 @@
 ---
 import "../styles/style.css";
 import Header from "../components/Header.astro";
+import Nyhed from "../components/Nyhed.astro";
+import Bg_icon from "../components/Bg_icon.astro";
+import Footer from "../components/Footer.astro";
+import Topknap from "../components/Topknap.astro";
+import TopknapMobile from "../components/Topknap_mobile.astro";
+import FooterMobile from "../components/Footer_mobile.astro";
+import Header_mobile from "../components/Header_mobile.astro";
+import Single_card from "../components/Single_card.astro";
+
+const { navn } = Astro.props;
 ---
 
 <html lang="en">
@@ -13,5 +23,18 @@ import Header from "../components/Header.astro";
   </head>
   <body>
     <Header />
+    <Header_mobile />
+    <Nyhed />
+
+    <Bg_icon />
+    <h1>{navn}</h1>
+
+    <a href="/program">Tilbage til program</a>
+    <Single_card />
+
+    <Topknap />
+    <TopknapMobile />
+    <Footer />
+    <FooterMobile />
   </body>
 </html>
