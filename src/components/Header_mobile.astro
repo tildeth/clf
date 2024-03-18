@@ -1,12 +1,14 @@
 ---
-import Knap from "../components/Knap.astro";
+import Sprog_knap from "../components/Sprog_knap.astro";
+import Burger from "../components/Burger.astro";
 ---
 
 <header>
   <nav class="flexNav">
+    <Sprog_knap />
     <a href="/"><img src="/icon/Logo.svg" alt="Logo" /></a>
+    <Burger />
   
-    <div>February 2 - 25/2024 København</div>
   </nav>
 </header>
 
@@ -15,21 +17,10 @@ import Knap from "../components/Knap.astro";
     justify-content: center;
     align-items: center;
   }
-  ul {
-    list-style: none;
-    max-width: fit-content;
-    padding: 10px;
-    border-radius: 25px;
-    background-color: var(--bg-overlay);
-    justify-content: center;
-    align-items: center;
-  }
-  a {
-    font-family: "circular";
-    font-size: 16px;
-  }
 
   div {
+    font-family: "circular";
+    font-size: 22px;
   }
 
   .flexUl {

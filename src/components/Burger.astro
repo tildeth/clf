@@ -1,5 +1,5 @@
 ---
-
+import "../styles/style.css";
 ---
 
 <nav>
@@ -11,11 +11,11 @@
 </nav>
 
 <nav class="mobil_nav">
-  <a href="/">SAMRBEJDE</a>
+  <a href="/">SAMARBEJDE</a>
   <a href="/">KORT</a>
   <a href="/program">PROGRAM</a>
   <a href="/">OM OS</a>
-  <a href="/">FOTOKONKURRENCE/a </a>
+  <a href="/">FOTOKONKURRENCE</a>
 </nav>
 
 <style>
@@ -61,8 +61,8 @@
     position: fixed;
     top: 0;
     left: 100%;
-    width: 100%;
-    min-height: 100vh;
+    width: 30%;
+    min-height: 50vh;
     display: block;
     z-index: 98;
     background-color: var(--bg-color);
@@ -71,7 +71,7 @@
   }
 
   .mobil_nav.is-active {
-    left: 0;
+    left: 65%;
   }
   .mobil_nav a {
     display: block;
@@ -86,6 +86,32 @@
     text-decoration: none;
   }
   .mobil_nav a:hover {
-    background-color: var(--bg-color);
+    color: aqua;
+
+    background: var(--link-hover);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 </style>
+
+<script>
+  window.onload = function () {
+    const menu_btn = document.querySelector(".burger");
+    const mobil_menu = document.querySelector(".mobil_nav");
+
+    menu_btn.addEventListener("click", function () {
+      menu_btn.classList.toggle("is-active");
+      mobil_menu.classList.toggle("is-active");
+    });
+
+    document.addEventListener("scroll", function () {
+      const header = document.querySelector("header");
+
+      if (window.scrollY > 0) {
+        header.classList.add("scrolled");
+      } else {
+        header.classList.remove("scrolled");
+      }
+    });
+  };
+</script>
