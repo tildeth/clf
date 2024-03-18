@@ -1,0 +1,45 @@
+---
+import Knap from "../components/Knap.astro";
+---
+
+<header>
+  <nav class="flexNav">
+    <a href="/"><img src="/icon/Logo.svg" alt="Logo" /></a>
+  
+    <div>February 2 - 25/2024 København</div>
+  </nav>
+</header>
+
+<style>
+  nav {
+    justify-content: center;
+    align-items: center;
+  }
+  ul {
+    list-style: none;
+    max-width: fit-content;
+    padding: 10px;
+    border-radius: 25px;
+    background-color: var(--bg-overlay);
+    justify-content: center;
+    align-items: center;
+  }
+  a {
+    font-family: "circular";
+    font-size: 16px;
+  }
+
+  div {
+  }
+
+  .flexUl {
+    display: flex;
+    gap: 1rem;
+  }
+  .flexNav {
+    display: flex;
+    gap: 13rem; /* Dette skal ændres, da det ikke er responsivt */
+  }
+</style>
+
+<script></script>
