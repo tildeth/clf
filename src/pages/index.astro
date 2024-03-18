@@ -2,11 +2,13 @@
 import "../styles/style.css";
 import Card from "../components/Card.astro";
 import Header from "../components/Header.astro";
-import Nyhed from "../components/Nyhed.astro";
+import Nyhed from "../components/Nyhed.astro";;
+import L1 from "../components/lightbeams/L1.astro";
+import Bg_icon from "../components/Bg_icon.astro";
 import Knap from "../components/Knap.astro";
 import Footer from "../components/Footer.astro";
 ---
-
+ 
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -17,6 +19,8 @@ import Footer from "../components/Footer.astro";
   </head>
   <body>
     <Header />
+    <h1>Astro</h1>
+    <Knap text="klik her" />
     <Nyhed />
     <h2>February 2 - 25/2024</h2>
     <h1>Copenhagen Lightfestival</h1>
