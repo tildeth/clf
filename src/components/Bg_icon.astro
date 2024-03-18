@@ -1,0 +1,108 @@
+---
+import "../styles/style.css";
+const { h1 } = Astro.props;
+const { h2 } = Astro.props;
+const { h3 } = Astro.props;
+---
+
+<article>
+  <div class="overskifter">
+    <h2>{h2}</h2>
+    <h1>{h1}</h1>
+    <h3>{h3}</h3>
+  </div>
+  <div class="bg_container">
+    <div class="circle1"></div>
+    <div class="circle2"></div>
+    <div class="circle3"></div>
+    <div class="circle4"></div>
+  </div>
+</article>
+
+<style>
+  .overskifter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative; /* Legg til denne linjen */
+    z-index: 1; /* Endre z-index til 1 */
+  }
+
+  h1 {
+    position: absolute;
+    z-index: 4;
+    padding-top: 400px;
+  }
+  h2 {
+    position: absolute;
+    z-index: 4;
+    padding-top: 200px;
+  }
+  h3 {
+    position: absolute;
+    z-index: 4;
+    padding-top: 600px;
+  }
+
+  .bg_container {
+    position: relative;
+    width: 100%;
+    height: auto;
+    z-index: 0;
+  }
+
+  .circle1 {
+    width: 782px; /* Diameteren af cirklen */
+    height: 316px; /* Diameteren af cirklen */
+    border-radius: 50%; /* Gør elementet til en cirkel */
+    background-color: rgb(142, 96, 242, 0.5); /* Farven på cirklen */
+    filter: blur(35px); /*gør cirklen sløret*/
+    rotate: 337.71deg;
+    position: absolute;
+    left: 35%;
+    top: 40px;
+    z-index: 0;
+  }
+  .circle2 {
+    width: 574px;
+    height: 290px;
+    border-radius: 50%; /* Gør elementet til en cirkel */
+    background-color: rgb(204, 96, 242, 0.5); /* Farven på cirklen */
+    filter: blur(35px); /*gør cirklen sløret*/
+    rotate: 6.05deg;
+    position: absolute;
+    left: 10%;
+    top: 70px;
+    z-index: 1;
+  }
+
+  .circle3 {
+    width: 360px;
+    height: 290px;
+    border-radius: 50%; /* Gør elementet til en cirkel */
+    background-color: rgb(245, 57, 71, 0.3); /* Farven på cirklen */
+    filter: blur(35px); /*gør cirklen sløret*/
+    position: absolute;
+    left: 27%;
+    top: 100px;
+    z-index: 2;
+  }
+
+  .circle4 {
+    width: 300px;
+    height: 349px;
+    border-radius: 50%; /* Gør elementet til en cirkel */
+    background-color: rgb(180, 88, 146, 0.4); /* Farven på cirklen */
+    filter: blur(35px); /*gør cirklen sløret*/
+    rotate: 334deg;
+    position: absolute;
+    top: 100px;
+    left: 43%;
+    z-index: 3;
+  }
+
+  article {
+    padding-bottom: 200px;
+  }
+</style>

@@ -1,18 +1,24 @@
 ---
 import Knap from "../components/Knap.astro";
+import SprogKnap from "./Sprog_knap.astro";
 ---
 
 <header>
   <nav class="flexNav">
     <a href="/"><img src="/icon/Logo.svg" alt="Logo" /></a>
     <ul class="flexUl">
-      <li><a href="/"><Knap text="SAMRBEJDE" /></a></li>
+      <li><a href="/"><Knap text="SAMARBEJDE" /></a></li>
       <li><a href="/"><Knap text="KORT" /></a></li>
       <li><a href="/program"><Knap text="PROGRAM" /></a></li>
       <li><a href="/"><Knap text="OM OS" /></a></li>
       <li><a href="/"><Knap text="FOTOKONKURRENCE" /></a></li>
     </ul>
-    <div>February 2 - 25/2024 København</div>
+
+    <div class="grid">
+      <SprogKnap />
+      <div>February 2 - 25/2024</div>
+      <div>København</div>
+    </div>
   </nav>
 </header>
 
@@ -35,7 +41,9 @@ import Knap from "../components/Knap.astro";
     font-size: 16px;
   }
 
-  div {
+  .grid {
+    display: grid;
+    gap: 0.3rem;
   }
 
   .flexUl {
@@ -44,7 +52,7 @@ import Knap from "../components/Knap.astro";
   }
   .flexNav {
     display: flex;
-    gap: 13rem; /* Dette skal ændres, da det ikke er responsivt */
+    gap: 16%; /* Dette skal ændres, da det ikke er responsivt */
   }
 </style>
 
