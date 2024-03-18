@@ -2,59 +2,84 @@
   <h3>Program</h3>
   <ul>
     <li>
-      <a href=""
-        >Lysværker<a href=""></a>
-        <li>
-          <a href="">Ruter</a>
-          <li><a href="">Events</a></li>
-          <li><a href="">Guidede ture</a></li>
-        <ul/>
-        <h3>Kontakt</h3>
-        <a href="">info@copenhagenlightfestival.org</a>
-        <p>+45 2555 6604</p>
-        <a href="">Om os</a>
-        <div class="flex">
-          <a href="" class="insta"
-            ><img src="icon/icon_instagram.svg" alt="" /></a
-          >
-          <a href="" class="fb"><img src="icon/icon_facebook.svg" alt="" /></a>
-          <a href="" class="yt"><img src="icon/icon_youtube.svg" alt="" /></a>
-        </div>
-        <h4>©COPENHAGEN LIGHT FESTIVAL</h4>
-    </section>
+      <a href="">Lysværker</a>
+    </li>
+    <li>
+      <a href="">Ruter</a>
+    </li>
+    <li><a href="">Events</a></li>
+    <li><a href="">Guidede ture</a></li>
+  </ul>
 
-      <style>
-        section {
-          align-items: center;
-          text-align: center;
-        }
-        h3,
-        h4 {
-          color: var(--primary-text-color);
-        }
-a{
+  <h3>Kontakt</h3>
+  <a href="">info@copenhagenlightfestival.org</a>
+  <p>+45 2555 6604</p>
+  <a href="">Om os</a>
+  <div class="flex">
+    <a href="https://www.instagram.com/cphlightfest/ " class="insta"></a>
+    <a href="https://www.facebook.com/cphlightfest/" class="fb"
+      ></a
+    >
+    <a href="https://www.youtube.com/@cphlightfest5395/ " class="yt"
+      ></a
+    >
+  </div>
+  <h4>©COPENHAGEN LIGHT FESTIVAL</h4>
+</section>
+<style>
+  section {
+    align-items: center;
+    text-align: center;
+  }
+  h3,
+  h4 {
     color: var(--primary-text-color);
-}
-        a:visited {
-          color: var(--link-visited);
-        }
-        a:hover {
-          /* color: var(--link-hover) */
-          color: aqua;
-        }
-        li {
-          list-style: none;
-        }
-        .flex a {
-          text-decoration: none;
-        }
-        .insta img:hover {
-          background: url("icon/icon_instahover.svg") no-repeat;
-        }
-        .fb img:hover {
-          background: url("icon/icon_fbhover.svg") no-repeat;
-        }
-        .yt img:hover {
-          background: url("icon/icon_ythover.svg") no-repeat;
-        }
-      </style>
+  }
+
+  a {
+    color: var(--primary-text-color);
+  }
+  a:visited {
+    color: var(--link-visited);
+  }
+  a:hover {
+    color: aqua;
+
+    background: var(--link-hover);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  li {
+    list-style: none;
+  }
+  .flex a {
+    text-decoration: none;
+  }
+
+  .insta {
+    background: url("icon/icon_instagram.svg") no-repeat;
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+  }
+  .insta:hover {
+    background: url("icon/icon_instahover.svg") no-repeat;
+  }
+  .fb {
+    background: url("icon/icon_facebook.svg") no-repeat;
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+  }
+  .fb:hover {
+    background: url("icon/icon_fbhover.svg") no-repeat;
+  }.yt {
+    background: url("icon/icon_youtube.svg") no-repeat;
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+  }
+  .yt:hover {
+    background: url("icon/icon_ythover.svg") no-repeat;
+  }
+</style>
