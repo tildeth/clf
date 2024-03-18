@@ -1,0 +1,48 @@
+---
+
+---
+
+<article class="ned">
+  <p class="pil"></p>
+  <p class="streg"></p>
+  <p>Hop til toppen</p>
+</article>
+
+<style>
+  p {
+    writing-mode: vertical-rl; /* Dette vil rotere teksten vertikalt fra høyre til venstre */
+    text-orientation: mixed; /* Dette er for å sikre at teksten leses fra bunnen til toppen */
+    white-space: nowrap; /* Dette hindrer teksten i å bryte linjer */
+    padding-top: 5px;
+  }
+
+  .streg {
+    width: 0;
+    height: 4px;
+    border-left: 2px solid rgb(255, 255, 255); /* venstre kant */
+    border-right: 2px solid rgb(255, 255, 255); /* høyre kant */
+    border-bottom: 2px solid rgb(255, 255, 255); /* bunnen */
+    padding-top: 10px;
+    margin-left: 23.8px;
+  }
+  .pil {
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent; /* venstre kant */
+    border-right: 10px solid transparent; /* høyre kant */
+    border-bottom: 10px solid rgb(255, 255, 255); /* bunnen */
+    padding-top: 10px;
+  }
+
+  .ned {
+    transition: transform 0.2s ease; /* Legger til en overgang for jevn animasjon */
+    margin-bottom: 1px;
+    position: fixed;
+  }
+
+  .ned:hover {
+    transform: translateY(
+      15px
+    ); /* Translaterer elementet 5 piksler nedover når det sveves over */
+  }
+</style>
