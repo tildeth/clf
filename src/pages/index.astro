@@ -2,11 +2,13 @@
 import "../styles/style.css";
 import Card from "../components/Card.astro";
 import Header from "../components/Header.astro";
+import Header_mobile from "../components/Header_mobile.astro";
 import Nyhed from "../components/Nyhed.astro";
 import L1 from "../components/lightbeams/L1.astro";
 import Bg_icon from "../components/Bg_icon.astro";
 import Knap from "../components/Knap.astro";
 import Footer from "../components/Footer.astro";
+import Footer_mobile from "../components/Footer_mobile.astro";
 import Topknap from "../components/Topknap.astro";
 import TopknapMobile from "../components/Topknap_mobile.astro";
 ---
@@ -21,6 +23,7 @@ import TopknapMobile from "../components/Topknap_mobile.astro";
   </head>
   <body>
     <Header />
+    <Header_mobile />
     <Bg_icon />
     <L1 />
     <Nyhed />
@@ -41,7 +44,11 @@ import TopknapMobile from "../components/Topknap_mobile.astro";
       </p>
       <Knap />
     </div>
+
     <Topknap />
+    <TopknapMobile />
+
     <Footer />
+    <Footer_mobile />
   </body>
 </html>
