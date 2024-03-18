@@ -75,25 +75,19 @@ p {
 }
 
 /* ------------------ WEB -------------------- */
-@media screen and (min-width: 620px) {
-  <Footer_mobile / >,
-  <TopknapMobile / >,
-  <Header_mobile / > {
+@media screen and (min-width: 700px) {
+  #mobilNav,
+  #mobilTop,
+  #footerMobil {
     display: none;
   }
 }
 
 /* ---------------- MOBIL --------------- */
-@media screen and (max-width: 620px) {
-  Header {
-    display: none;
-  }
-
-  Topknap {
-    display: none;
-  }
-
-  Footer {
+@media screen and (max-width: 700px) {
+  #deskNav,
+  #deskFooter,
+  #deskTop {
     display: none;
   }
 }
