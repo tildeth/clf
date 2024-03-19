@@ -3,6 +3,7 @@
 ---
 
 <article  class="hidden" id="hiddenContent">
+  <div id="closeButton">&times;</div>
   <h2>Tilmeld vores nyhedsbrev</h2>
   <ul>
     <li>Email</li>
@@ -27,6 +28,7 @@
     max-width: 500px;
     min-height: 400px;
     margin-left: 490px;
+    z-index: 10;
   }
 
   .hold_dig{
@@ -69,6 +71,26 @@
   li{
     padding-left: 10px;
   }
+
+/* burger menu kryds */
+#closeButton {
+  position: absolute;
+  top: 22%;
+  left: 36%;
+  cursor: pointer;
+  font-size: 24px;
+  color: #f0eeec; /* Adjust color as needed */
+}
+
+@media (max-width: 600px) {
+
+  #closeButton {
+    top: 11%; 
+    right: 18%; 
+    font-size: 20px; 
+  }
+}
+
   /*   -------HOLD DIG OPDATERET-------- */
   .vertical-text {
     writing-mode: vertical-rl; /* Dette vil rotere teksten vertikalt fra høyre til venstre */
@@ -91,4 +113,13 @@
   hiddenContent.classList.toggle("hidden"); // Toggler klassen for å vise eller skjule innholdet
 });
 
+/* burger menu */
+
+document.getElementById("closeButton").addEventListener("click", function() {
+  var hiddenContent = document.getElementById("hiddenContent");
+  hiddenContent.classList.add("hidden"); // Add the 'hidden' class to hide the content when close button is clicked
+});
+
+
 </script>
+
