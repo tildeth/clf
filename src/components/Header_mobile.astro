@@ -1,0 +1,40 @@
+---
+import Sprog_knap from "../components/Sprog_knap.astro";
+import Burger from "../components/Burger.astro";
+---
+
+<header id="mobilnav">
+  <nav class="flexNav">
+    <Sprog_knap />
+    <a href="/"><img src="/icon/Logo.svg" alt="Logo" /></a>
+    <Burger />
+  </nav>
+</header>
+
+<style>
+  nav {
+    justify-content: center;
+    align-items: center;
+  }
+
+  div {
+    font-family: "circular";
+    font-size: 22px;
+  }
+
+  .flexUl {
+    display: flex;
+    gap: 1rem;
+  }
+  .flexNav {
+    display: flex;
+    gap: 11%; /* Dette skal ændres, da det ikke er responsivt */
+  }
+
+  #mobilnav {
+    position: relative;
+    z-index: 100;
+  }
+</style>
+
+<script></script>
