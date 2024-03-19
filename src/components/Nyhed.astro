@@ -4,10 +4,12 @@
 
 <article  class="hidden" id="hiddenContent">
   <h2>Tilmeld vores nyhedsbrev</h2>
-  <ul>
-    <li>Email</li>
-    <li class="tilmeld">Tilmeld</li>
-  </ul>
+    <ul>
+      <li> Email <input type="email" placeholder="Skriv din email her">
+      </li>
+      <li class="tilmeld">Tilmeld</li>
+    </ul>
+
   <hr />
   <p class="opda">
     Få opdatering på nyheder, event og meget andet både som gæst, kunstner eller
@@ -28,13 +30,17 @@
     min-height: 400px;
     margin-left: 490px;
   }
+  input{
+    background-color: var(--nyhedsbrev);
+  }
 
   .hold_dig{
     padding-left: 1340px;
   }
   h2 {
     padding: 10px;
-    padding-left: 100px;
+    padding-top: 30px;
+    padding-left: 65px;
   }
   p {
     color: var(--primary-text-color);
@@ -44,7 +50,7 @@
 
   .opda{
     padding-left: 100px;
-    padding-top: 30px;
+    padding-bottom: 40px;
     font-size: x-large;
   }
 
@@ -63,7 +69,7 @@
   }
 
   .tilmeld{
-    padding-left: 300px;
+    padding-left: 140px;
   }
   
   li{
@@ -87,8 +93,10 @@
 
 <script>
   document.getElementById("toggleButton").addEventListener("click", function() {
-  var hiddenContent = document.getElementById("hiddenContent");
+  var hiddenContent = document.getElementById("hiddenContent"
+  );
   hiddenContent.classList.toggle("hidden"); // Toggler klassen for å vise eller skjule innholdet
 });
+
 
 </script>
