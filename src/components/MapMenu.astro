@@ -1,18 +1,16 @@
 ---
-import Knap from "../components/Knap.astro";
+import KnapUnder from "./KnapUnder.astro";
 const { text } = Astro.props;
 ---
 
 <header>
   <nav class="flexNav">
     <ul class="flexUl">
-      <li data-link="/"><Knap {text} /></li>
-      <li data-link="/"><Knap {text} /></li>
-      <li data-link="program">
-        <Knap {text} />
+      <li data-link=""><KnapUnder text="Gåruter" /></li>
+      <li data-link=""><KnapUnder text="Cykelruter" /></li>
+      <li data-link="">
+        <KnapUnder text="Kort over området" />
       </li>
-      <li data-link="/"><a href="/"><Knap {text} /></a></li>
-      <li data-link="/"><a href="/"><Knap {text} /></a></li>
     </ul>
   </nav>
 </header>
@@ -28,7 +26,7 @@ const { text } = Astro.props;
     list-style: none;
     max-width: fit-content;
     padding: 10px;
-    border-radius: 25px;
+    border-radius: 2rem;
     background-color: var(--bg-overlay);
     justify-content: center;
     align-items: center;
