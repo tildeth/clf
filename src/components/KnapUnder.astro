@@ -1,0 +1,44 @@
+---
+const { text } = Astro.props;
+---
+
+<button>
+  <div class="inner">
+    {text}
+  </div>
+</button>
+
+<style>
+  button {
+    padding: 0.08rem;
+    position: relative;
+    background: var(--button-deafult);
+    border-radius: 1.5rem;
+    border: none;
+  }
+
+  .inner {
+    background: var(--bg-overlay);
+    color: var(--primary-text-color);
+    padding: 0.65rem;
+    padding-left: 0.9rem;
+    padding-right: 0.9rem;
+    border-radius: 20px;
+  }
+
+  button:hover {
+    box-shadow: 4px 2px 4px var(--button-hover);
+  }
+
+  button:active .inner {
+    background: var(--button-active);
+  }
+</style>
+
+<script>
+
+  
+
+
+  
+</script>

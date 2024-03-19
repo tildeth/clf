@@ -1,0 +1,55 @@
+---
+import KnapUnder from "../components/KnapUnder.astro";
+/* const { text1 } = Astro.props;
+const { text2 } = Astro.props; */
+---
+
+<header>
+  <nav class="flexNav">
+    <ul class="flexUl">
+      <li data-link="/"><KnapUnder /></li>
+      <li data-link="/"><KnapUnder /></li>
+      <li data-link="program"><KnapUnder /></li>
+      <li data-link="/"><a href="/"></a></li>
+      <li data-link="/"><a href="/"></a></li>
+    </ul>
+  </nav>
+</header>
+
+<style>
+  nav {
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 100;
+  }
+  ul {
+    list-style: none;
+    max-width: fit-content;
+    padding: 10px;
+    border-radius: 25px;
+    background-color: var(--bg-overlay);
+    justify-content: center;
+    align-items: center;
+  }
+  a {
+    font-family: "circular";
+    font-size: 16px;
+  }
+
+  .grid {
+    display: grid;
+    gap: 0.3rem;
+  }
+
+  .flexUl {
+    display: flex;
+    gap: 1rem;
+  }
+  .flexNav {
+    display: flex;
+    gap: 16%;
+  }
+</style>
+
+<script></script>
