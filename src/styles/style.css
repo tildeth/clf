@@ -75,11 +75,10 @@ p {
 }
 
 /* ------------------ WEB -------------------- */
-@media screen and (min-width: 700px) {
-  #mobilNav,
-  #mobilTop,
+@media (min-width: 750px) {
+  #mobilNav, #mobilTop,
   #footerMobil {
-    display: none;
+    display:none;
   }
 }
 
