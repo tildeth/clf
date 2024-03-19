@@ -10,10 +10,11 @@ import Sprog_knap from "./Sprog_knap.astro";
     <ul class="flexUl">
       <li data-link="/"><Knap text="SAMARBEJDE" /></li>
       <li data-link="ruter"><Knap text="RUTER" /></li>
+      <li data-link="ruter"><Knap text="KORT" /></li>
       <li data-link="program">
         <Knap text="PROGRAM" />
       </li>
-      <li data-link="/"><a href="/"><Knap text="OM OS" /></a></li>
+      <li data-link=""><a href="program"><Knap text="program" /></a></li>
       <li data-link="/"><a href="/"><Knap text="FOTOKONKURRENCE" /></a></li>
     </ul>
 
@@ -63,13 +64,27 @@ import Sprog_knap from "./Sprog_knap.astro";
 </style>
 
 <script>
+  console.log(
+    "LOcation",
+    window.location.href.substring(window.location.href.lastIndexOf("/") + 1)
+  );
+  const currentPage = window.location.href.substring(
+    window.location.href.lastIndexOf("/") + 1
+  );
+
   document.querySelectorAll(".flexUl li").forEach((item) => {
     // console.log("ITE", item);
 
     item.addEventListener("click", klikBtn);
   });
   function klikBtn(evt) {
-    console.log("SOMETHING", evt.currentTarget.dataset.link);
-    location.href = evt.currentTarget.dataset.link;
+    //evt.preventDefault();
+    const denDerErTrykketPaa = evt.currentTarget;
+    console.log("SOMETHING", denDerErTrykketPaa.querySelector("button .inner"));
+
+    location.href = denDerErTrykketPaa.dataset.link;
+    denDerErTrykketPaa.querySelector("button .inner").style.background =
+      "linear-gradient(to left, #02b3b1, #1d87c9, #8a60f4, #d851ac, #ce4984, #e7525d)";
   }
 </script>
+//var(--button-active)
