@@ -3,6 +3,7 @@
 ---
 
 <article  class="hidden" id="hiddenContent">
+  <div id="closeButton">&times;</div>
   <h2>Tilmeld vores nyhedsbrev</h2>
     <ul>
       <li> Email <input type="email" placeholder="Skriv din email her">
@@ -29,6 +30,7 @@
     max-width: 500px;
     min-height: 400px;
     margin-left: 490px;
+    z-index: 10;
   }
   input{
     background-color: var(--nyhedsbrev);
@@ -75,6 +77,26 @@
   li{
     padding-left: 10px;
   }
+
+/* burger menu kryds */
+#closeButton {
+  position: absolute;
+  top: 22%;
+  left: 36%;
+  cursor: pointer;
+  font-size: 24px;
+  color: #f0eeec; /* Adjust color as needed */
+}
+
+@media (max-width: 600px) {
+
+  #closeButton {
+    top: 11%; 
+    right: 18%; 
+    font-size: 20px; 
+  }
+}
+
   /*   -------HOLD DIG OPDATERET-------- */
   .vertical-text {
     writing-mode: vertical-rl; /* Dette vil rotere teksten vertikalt fra høyre til venstre */
@@ -102,7 +124,7 @@
     min-height:50px;
     margin-left: 30px;
     margin-right: 30px;
-  }
+  }}
 h2{
   font-size: medium;
 }
@@ -119,5 +141,5 @@ h2{
   hiddenContent.classList.toggle("hidden"); // Toggler klassen for å vise eller skjule innholdet
 });
 
-
 </script>
+
