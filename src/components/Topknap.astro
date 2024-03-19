@@ -23,7 +23,7 @@
     border-right: 2px solid rgb(255, 255, 255); /* høyre kant */
     border-bottom: 2px solid rgb(255, 255, 255); /* bunnen */
     padding-top: 10px;
-    margin-left: 23.8px;
+    margin-left: 29.8px;
   }
   .pil {
     width: 0;
@@ -37,12 +37,16 @@
   .ned {
     transition: transform 0.2s ease; /* Legger til en overgang for jevn animasjon */
     margin-bottom: 1px;
-    position: fixed;
   }
 
   .ned:hover {
-    transform: translateY(
-      15px
-    ); /* Translaterer elementet 5 piksler nedover når det sveves over */
+    transform: translateY(15px);
+  }
+
+  /*   -------media q------- */
+  @media screen and (max-width: 700px) {
+    .ned {
+      display: none;
+    }
   }
 </style>
