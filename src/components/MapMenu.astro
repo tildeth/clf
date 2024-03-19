@@ -1,0 +1,54 @@
+---
+import KnapUnder from "./KnapUnder.astro";
+const { text } = Astro.props;
+---
+
+<header>
+  <nav class="flexNav">
+    <ul class="flexUl">
+      <li data-link=""><KnapUnder text="Gåruter" /></li>
+      <li data-link=""><KnapUnder text="Cykelruter" /></li>
+      <li data-link="">
+        <KnapUnder text="Kort over området" />
+      </li>
+    </ul>
+  </nav>
+</header>
+
+<style>
+  nav {
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 100;
+  }
+  ul {
+    list-style: none;
+    max-width: fit-content;
+    padding: 10px;
+    border-radius: 2rem;
+    background-color: var(--bg-overlay);
+    justify-content: center;
+    align-items: center;
+  }
+  a {
+    font-family: "circular";
+    font-size: 16px;
+  }
+
+  .grid {
+    display: grid;
+    gap: 0.3rem;
+  }
+
+  .flexUl {
+    display: flex;
+    gap: 1rem;
+  }
+  .flexNav {
+    display: flex;
+    gap: 16%;
+  }
+</style>
+
+<script></script>
