@@ -9,15 +9,13 @@ import Sprog_knap from "./Sprog_knap.astro";
     <a href="/"><img src="/icon/Logo.svg" alt="Logo" /></a>
     <ul class="flexUl">
       <li data-link="/"><Knap text="SAMARBEJDE" /></li>
-      <li data-link="ruter"><Knap text="RUTER" /></li>
       <li data-link="ruter"><Knap text="KORT" /></li>
       <li data-link="program">
         <Knap text="PROGRAM" />
+        <li data-link="ruter"><Knap text="RUTER" /></li>
       </li>
-      <li data-link=""><a href="program"><Knap text="program" /></a></li>
       <li data-link="/"><a href="/"><Knap text="FOTOKONKURRENCE" /></a></li>
     </ul>
-
     <div class="grid">
       <Sprog_knap />
       <div>February 2 - 25/2024</div>
@@ -59,7 +57,6 @@ import Sprog_knap from "./Sprog_knap.astro";
   .flexNav {
     display: flex;
     gap: 16%;
-    
   }
 </style>
 
