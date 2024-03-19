@@ -105,4 +105,79 @@ const { h3 } = Astro.props;
   article {
     padding-bottom: 200px;
   }
+
+  /*   ---------media q----------- */
+  @media screen and (max-width: 700px) {
+    h1 {
+      font-size: xx-large;
+      padding-top: 250px;
+    }
+    h2 {
+      font-size: small;
+    }
+
+    h3 {
+      font-size: smaller;
+    }
+    .bg_container {
+      position: relative;
+      width: 100%;
+      height: auto;
+      z-index: 0;
+    }
+
+    .circle1 {
+      width: 391px; /* Diameteren af cirklen */
+      height: 159px; /* Diameteren af cirklen */
+      border-radius: 50%; /* Gør elementet til en cirkel */
+      background-color: rgb(142, 96, 242, 0.5); /* Farven på cirklen */
+      filter: blur(35px); /*gør cirklen sløret*/
+      rotate: 337.71deg;
+      position: absolute;
+      left: 30%;
+      top: 40px;
+      z-index: 0;
+    }
+    .circle2 {
+      width: 287x;
+      height: 145px;
+      border-radius: 50%; /* Gør elementet til en cirkel */
+      background-color: rgb(204, 96, 242, 0.5); /* Farven på cirklen */
+      filter: blur(35px); /*gør cirklen sløret*/
+      rotate: 6.05deg;
+      position: absolute;
+      left: 1%;
+      top: 70px;
+      z-index: 1;
+    }
+
+    .circle3 {
+      width: 180px;
+      height: 145px;
+      border-radius: 50%; /* Gør elementet til en cirkel */
+      background-color: rgb(245, 57, 71, 0.3); /* Farven på cirklen */
+      filter: blur(35px); /*gør cirklen sløret*/
+      position: absolute;
+      right: 20%;
+      top: 100px;
+      z-index: 2;
+    }
+
+    .circle4 {
+      width: 150px;
+      height: 174px;
+      border-radius: 50%; /* Gør elementet til en cirkel */
+      background-color: rgb(180, 88, 146, 0.4); /* Farven på cirklen */
+      filter: blur(35px); /*gør cirklen sløret*/
+      rotate: 334deg;
+      position: absolute;
+      top: 100px;
+      left: 43%;
+      z-index: 3;
+    }
+
+    article {
+      padding-bottom: 200px;
+    }
+  }
 </style>

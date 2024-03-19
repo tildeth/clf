@@ -1,4 +1,5 @@
 ---
+import "../styles/style.css";
 import Sprog_knap from "../components/Sprog_knap.astro";
 import Burger from "../components/Burger.astro";
 ---
@@ -34,6 +35,12 @@ import Burger from "../components/Burger.astro";
   #mobilnav {
     position: relative;
     z-index: 100;
+  }
+
+  @media screen and (min-width: 700px) {
+    #mobilnav {
+      display: none;
+    }
   }
 </style>
 
