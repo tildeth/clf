@@ -7,9 +7,9 @@ console.log("ThePageWeAreOn", ThePageWeAreOn);
 ---
 
 <header id="descNav">
-  <nav class="flexNav">
+  <nav>
     <a href="/" class="logo"><img src="/icon/Logo.svg" alt="Logo" /></a>
-    <ul class="flexUl">
+    <ul>
       <li>
         <a href="samarbejde"
           ><Knap
@@ -42,82 +42,58 @@ console.log("ThePageWeAreOn", ThePageWeAreOn);
         >
       </li>
     </ul>
-    <div class="grid">
+    <div class="sprogDato">
       <Sprog_knap />
       <div>February 2 - 25/2024</div>
       <div>København</div>
     </div>
   </nav>
+</header>
 
-  <style>
-    nav {
-      justify-content: center;
-      align-items: center;
-      position: relative;
-      z-index: 100;
-    }
-    ul {
-      list-style: none;
-      max-width: fit-content;
-      padding: 10px;
-      border-radius: 25px;
-      background-color: var(--bg-overlay);
-      justify-content: center;
-      align-items: center;
-    }
-
-    a {
-      font-family: "circular";
-      font-size: 16px;
-    }
-
-    .grid {
-      display: grid;
-      gap: 0.3rem;
-    }
-
+<style>
+  header {
+    margin: 1rem;
+  }
+  nav {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    max-width: 100%;
+  }
 
   .logo {
-    position: fixed;
-    top: 20px;
-    left: 30px;
+    justify-self: start;
   }
 
-  .flexUl {
-    position: fixed;
-    top: 10px;
-    margin-bottom: 100px;
-    position: center;
+  ul {
+    justify-self: center;
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+    max-width: fit-content;
+    padding: 10px;
+    border-radius: 25px;
+    background-color: var(--bg-overlay);
+    justify-content: center;
+    align-items: center;
   }
 
-  .grid {
-    position: fixed;
-    top: 20px;
-    right: 100px;
+  a {
+    font-family: "circular";
+    font-size: 16px;
+  }
+
+  .sprogDato {
+    justify-self: end;
+    margin-top: 0.5rem;
+  }
+  .sprogDato div {
+    padding-top: 0.5rem;
   }
 
   /*   --------media q------ */
   @media screen and (max-width: 700px) {
     header {
       display: none;
-
-    .flexUl {
-      display: flex;
-      gap: 1rem;
     }
-    .flexNav {
-      display: flex;
-      gap: 16%;
-
-    }
-
-    /*   --------media q------ */
-    @media screen and (max-width: 700px) {
-      header {
-        display: none;
-      }
-    }
-  </style>
-
-  <script></script>
-</header>
+  }
+</style>
