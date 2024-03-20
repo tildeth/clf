@@ -1,11 +1,16 @@
 ---
 import "../styles/style.css";
+const { h1 } = Astro.props;
+const { h2 } = Astro.props;
+const { h3 } = Astro.props;
 ---
 
 <article>
-  <h2>February 2 - 25/2024</h2>
-  <h1>Copenhagen Lightfestival</h1>
-  <h3>Entrance free festival</h3>
+  <div class="overskifter">
+    <h2>{h2}</h2>
+    <h1>{h1}</h1>
+    <h3>{h3}</h3>
+  </div>
   <div class="bg_container">
     <div class="circle1"></div>
     <div class="circle2"></div>
@@ -15,29 +20,37 @@ import "../styles/style.css";
 </article>
 
 <style>
+  .overskifter {
+    top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative; /* Legg til denne linjen */
+    z-index: 1; /* Endre z-index til 1 */
+  }
+
   h1 {
     position: absolute;
-    z-index: 5;
-    padding-top: 70px;
-    padding-left: 12%;
+    z-index: 4;
+    padding-top: 400px;
   }
-
   h2 {
     position: absolute;
-    z-index: 6;
-    padding-left: 31%;
+    z-index: 4;
+    padding-top: 200px;
   }
-
   h3 {
     position: absolute;
-    z-index: 5;
-    padding-top: 270px;
-    padding-left: 35%;
+    z-index: 4;
+    padding-top: 600px;
   }
+
   .bg_container {
     position: relative;
     width: 100%;
     height: auto;
+    z-index: 0;
   }
 
   .circle1 {
@@ -49,7 +62,7 @@ import "../styles/style.css";
     rotate: 337.71deg;
     position: absolute;
     left: 35%;
-    top: 40px;
+    top: 150px;
     z-index: 0;
   }
   .circle2 {
@@ -61,7 +74,7 @@ import "../styles/style.css";
     rotate: 6.05deg;
     position: absolute;
     left: 10%;
-    top: 70px;
+    top: 180px;
     z-index: 1;
   }
 
@@ -73,7 +86,7 @@ import "../styles/style.css";
     filter: blur(35px); /*gør cirklen sløret*/
     position: absolute;
     left: 27%;
-    top: 100px;
+    top: 210px;
     z-index: 2;
   }
 
@@ -85,12 +98,116 @@ import "../styles/style.css";
     filter: blur(35px); /*gør cirklen sløret*/
     rotate: 334deg;
     position: absolute;
-    top: 100px;
+    top: 130px;
     left: 43%;
     z-index: 3;
   }
 
   article {
-    padding-bottom: 200px;
+    padding-bottom: 500px;
+  }
+
+  /*   ---------media q----------- */
+
+  @media screen and (max-width: 1100px) {
+    h1 {
+      font-size: 65px;
+    }
+    h2 {
+      font-size: 50px;
+    }
+
+    h3 {
+      font-size: 40px;
+    }
+  }
+
+  @media screen and (max-width: 800px) {
+    h1 {
+      font-size: 50px;
+    }
+
+    h2 {
+      font-size: 40px;
+    }
+
+    h3 {
+      font-size: 30px;
+    }
+  }
+  @media screen and (max-width: 700px) {
+    h1 {
+      font-size: xx-large;
+      padding-top: 100px;
+    }
+    h2 {
+      font-size: large;
+      padding-top: 30px;
+    }
+
+    h3 {
+      font-size: smaller;
+      padding-top: 170px;
+    }
+    .bg_container {
+      position: relative;
+      width: 100%;
+      height: auto;
+      z-index: 0;
+    }
+
+    .circle1 {
+      width: 391px; /* Diameteren af cirklen */
+      height: 159px; /* Diameteren af cirklen */
+      border-radius: 50%; /* Gør elementet til en cirkel */
+      background-color: rgb(142, 96, 242, 0.5); /* Farven på cirklen */
+      filter: blur(35px); /*gør cirklen sløret*/
+      rotate: 337.71deg;
+      position: absolute;
+      left: 30%;
+      top: 40px;
+      z-index: 0;
+    }
+    .circle2 {
+      width: 287x;
+      height: 145px;
+      border-radius: 50%; /* Gør elementet til en cirkel */
+      background-color: rgb(204, 96, 242, 0.5); /* Farven på cirklen */
+      filter: blur(35px); /*gør cirklen sløret*/
+      rotate: 6.05deg;
+      position: absolute;
+      left: 1%;
+      top: 70px;
+      z-index: 1;
+    }
+
+    .circle3 {
+      width: 180px;
+      height: 145px;
+      border-radius: 50%; /* Gør elementet til en cirkel */
+      background-color: rgb(245, 57, 71, 0.3); /* Farven på cirklen */
+      filter: blur(35px); /*gør cirklen sløret*/
+      position: absolute;
+      right: 20%;
+      top: 100px;
+      z-index: 2;
+    }
+
+    .circle4 {
+      width: 150px;
+      height: 174px;
+      border-radius: 50%; /* Gør elementet til en cirkel */
+      background-color: rgb(180, 88, 146, 0.4); /* Farven på cirklen */
+      filter: blur(35px); /*gør cirklen sløret*/
+      rotate: 334deg;
+      position: absolute;
+      top: 100px;
+      left: 43%;
+      z-index: 3;
+    }
+
+    article {
+      padding-bottom: 200px;
+    }
   }
 </style>

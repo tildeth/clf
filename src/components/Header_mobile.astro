@@ -1,0 +1,54 @@
+---
+import "../styles/style.css";
+import Sprog_knap from "../components/Sprog_knap.astro";
+import Burger from "../components/Burger.astro";
+---
+
+<header id="mobilnav">
+  <nav>
+    <div class="sprog"><Sprog_knap /></div>
+    <a href="/"><img src="/icon/Logo.svg" alt="Logo" /></a>
+    <div class="burger"><Burger /></div>
+  </nav>
+</header>
+
+<style>
+  header {
+    margin: 1rem;
+  }
+  nav {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    max-width: 100%;
+  }
+  div {
+    font-family: "circular";
+    font-size: 22px;
+  }
+
+  .sprog {
+    justify-self: start;
+    align-self: center;
+  }
+
+  a {
+    justify-self: center;
+    align-self: center;
+  }
+
+  .burger {
+    justify-self: end;
+    align-self: center;
+  }
+
+  #mobilnav {
+    position: relative;
+    z-index: 100;
+  }
+
+  @media screen and (min-width: 1050px) {
+    #mobilnav {
+      display: none;
+    }
+  }
+</style>

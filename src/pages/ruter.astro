@@ -1,57 +1,64 @@
 ---
 import "../styles/style.css";
-import Card from "../components/Card.astro";
 import Header from "../components/Header.astro";
 import Header_mobile from "../components/Header_mobile.astro";
 import Nyhed from "../components/Nyhed.astro";
-import L1 from "../components/lightbeams/L1.astro";
 import Bg_icon from "../components/Bg_icon.astro";
-import Knap from "../components/Knap.astro";
 import Footer from "../components/Footer.astro";
 import Footer_mobile from "../components/Footer_mobile.astro";
 import Topknap from "../components/Topknap.astro";
 import TopknapMobile from "../components/Topknap_mobile.astro";
-import "../../layouts/main_layout.astro"
+import MapMenu from "../components/MapMenu.astro";
 ---
+
 <html lang="da">
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-
-    <title>Forside</title>
+    <title>Ruter</title>
   </head>
- <header id="toppen">
-    <Header/>
+  <body>
+    <Header />
     <Header_mobile />
-  </header>
+    <Bg_icon h1="Ruter" />
     <Nyhed />
-    <Bg_icon
-      h1="Copenhagen Lightfestival"
-      h2="February 2 - 25/2024"
-      h3="Entrance free festival"
-    />
+    <MapMenu text="Gåture"/>
 
-    <Card />
-    <Card />
+    <h2>Gåruter</h2>
+    <h3>De korte ruter</h3>
+    <!--   <Kort />
+    <Kort /> -->
 
-    <div>
-      <img src="" alt="" />
-      <h4>Lys værker</h4>
-      <p>
-        Copenhagen Light Festival er en årligt tilbagevendende festival for lys,
-        der transformerer det stille og kolde vintermørke til en særlig fejring
-        af lyskunst, lysdesign og lysende oplevelser midt i København.
-      </p>
-      <Knap />
-    </div>
+    <h3>De mellemlange ruter</h3>
+    <!--   <Kort />
+    <Kort /> -->
+
+    <h3>De lange ruter</h3>
+    <!--  <Kort />
+    <Kort /> -->
+
+    <h2>Cykelruter</h2>
+    <h3>De korte ruter</h3>
+    <!--   <Kort />
+    <Kort /> -->
+
+    <h3>De mellemlange ruter</h3>
+    <!-- <Kort />
+    <Kort /> -->
+
+    <h3>De lange ruter</h3>
+    <!--    <Kort />
+    <Kort /> -->
+
+    <h2>Kort over hele området</h2>
+    <!--   <Kort /> -->
 
     <Topknap />
-
     <TopknapMobile />
 
     <Footer />
     <Footer_mobile />
-  
+  </body>
 </html>

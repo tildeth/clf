@@ -4,10 +4,14 @@
 
 <article  class="hidden" id="hiddenContent">
   <h2>Tilmeld vores nyhedsbrev</h2>
-  <ul>
-    <li>Email</li>
-    <li class="tilmeld">Tilmeld</li>
-  </ul>
+    <ul>
+      <form>
+      <li> Email <input type="text" placeholder="alan@silje@twisttmann.cat">
+      </li>
+      <li class="tilmeld"><button type="submit">Tilmeld</button></li>
+    </form>
+    </ul>
+
   <hr />
   <p class="opda">
     Få opdatering på nyheder, event og meget andet både som gæst, kunstner eller
@@ -27,6 +31,14 @@
     max-width: 500px;
     min-height: 400px;
     margin-left: 490px;
+    z-index: 10;
+  }
+  input{
+    background-color: var(--nyhedsbrev);
+  }
+
+  ::placeholder{
+
   }
 
   .hold_dig{
@@ -34,7 +46,8 @@
   }
   h2 {
     padding: 10px;
-    padding-left: 100px;
+    padding-top: 30px;
+    padding-left: 65px;
   }
   p {
     color: var(--primary-text-color);
@@ -44,7 +57,7 @@
 
   .opda{
     padding-left: 100px;
-    padding-top: 30px;
+    padding-bottom: 40px;
     font-size: x-large;
   }
 
@@ -58,17 +71,43 @@
     
   }
 
+  button{
+    background-color: var(--nyhedsbrev);
+    border-color: var(--nyhedsbrev);
+    color: var(--primary-text-color);
+    letter-spacing: 1.5px;
+  }
   div{
     margin-right: 0px;
   }
 
   .tilmeld{
-    padding-left: 300px;
+    padding-left: 140px;
   }
   
   li{
     padding-left: 10px;
   }
+
+/* burger menu kryds */
+#closeButton {
+  position: absolute;
+  top: 22%;
+  left: 36%;
+  cursor: pointer;
+  font-size: 24px;
+  color: #f0eeec; /* Adjust color as needed */
+}
+
+@media (max-width: 600px) {
+
+  #closeButton {
+    top: 11%; 
+    right: 18%; 
+    font-size: 20px; 
+  }
+}
+
   /*   -------HOLD DIG OPDATERET-------- */
   .vertical-text {
     writing-mode: vertical-rl; /* Dette vil rotere teksten vertikalt fra høyre til venstre */
@@ -76,19 +115,51 @@
     white-space: nowrap; /* Dette hindrer teksten i å bryte linjer */
     background-color: var(--nyhedsbrev);
     padding: 5px;
-    border-radius: 22px;
+    border-radius: 22px; 
     position: fixed;
+    top: 90px;
+    right: 0px;
   }
   .hidden {
-  display: none; /* Skjuler elementet som standard */
+  display: none; 
  /*  transition: opacity 0.5s ease; /* Legger til en overgang for jevn animasjon */ */
 }
+
+/* -----------media q--------- */
+@media screen and (max-width: 700px) {
+  .hold_dig{
+   padding-left: 500px;
+  }
+  article {
+    background-color: var(--nyhedsbrev);
+    border-radius: 22px;
+    max-width: 300px;
+    min-height:50px;
+    margin-left: 30px;
+    margin-right: 30px;
+  }}
+/* h2{
+  font-size: medium;
+}
+.opda{
+  font-size: small;
+} */
+
 </style>
 
 <script>
   document.getElementById("toggleButton").addEventListener("click", function() {
+  var hiddenContent = document.getElementById("hiddenContent"
+  );
+  hiddenContent.classList.toggle("hidden"); 
+});
+
+/* burger menu */
+
+document.getElementById("closeButton").addEventListener("click", function() {
   var hiddenContent = document.getElementById("hiddenContent");
-  hiddenContent.classList.toggle("hidden"); // Toggler klassen for å vise eller skjule innholdet
+  hiddenContent.classList.add("hidden"); // Add the 'hidden' class to hide the content when close button is clicked
 });
 
 </script>
+

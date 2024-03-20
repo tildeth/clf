@@ -2,10 +2,13 @@
 
 ---
 
-<article class="ned">
+<article id="deskTop" class="ned">
+ 
   <p class="pil"></p>
   <p class="streg"></p>
-  <p>Hop til toppen</p>
+
+  <p> <a href="#toppen">Hop til toppen</a></p>
+
 </article>
 
 <style>
@@ -19,30 +22,33 @@
   .streg {
     width: 0;
     height: 4px;
-    border-left: 2px solid rgb(255, 255, 255); /* venstre kant */
-    border-right: 2px solid rgb(255, 255, 255); /* høyre kant */
-    border-bottom: 2px solid rgb(255, 255, 255); /* bunnen */
+    border-left: 2px solid rgb(255, 255, 255); 
+    border-right: 2px solid rgb(255, 255, 255); 
+    border-bottom: 2px solid rgb(255, 255, 255); 
     padding-top: 10px;
-    margin-left: 23.8px;
+    margin-left: 29.8px;
   }
   .pil {
     width: 0;
     height: 0;
-    border-left: 10px solid transparent; /* venstre kant */
-    border-right: 10px solid transparent; /* høyre kant */
-    border-bottom: 10px solid rgb(255, 255, 255); /* bunnen */
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent; 
+    border-bottom: 10px solid rgb(255, 255, 255);¢
     padding-top: 10px;
   }
-
   .ned {
     transition: transform 0.2s ease; /* Legger til en overgang for jevn animasjon */
     margin-bottom: 1px;
-    position: fixed;
   }
 
   .ned:hover {
-    transform: translateY(
-      15px
-    ); /* Translaterer elementet 5 piksler nedover når det sveves over */
+    transform: translateY(15px);
+  }
+
+  /*   -------media q------- */
+  @media screen and (max-width: 700px) {
+    .ned {
+      display: none;
+    }
   }
 </style>

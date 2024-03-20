@@ -2,37 +2,48 @@
 
 ---
 
-<div><button>DA</button><button>ENG</button></div>
+<div><button class="da">DA</button><button class="eng">ENG</button></div>
 
 <style>
-    div{
+  div {
     padding: 0.09rem;
     background: var(--primary-text-color);
     border-radius: 1.5rem;
     max-width: fit-content;
   }
-  button{
+  button {
     background-color: var(--bg-color);
     color: var(--primary-text-color);
     border-radius: 1.5rem;
     border: none;
+    align-self: center;
   }
 
-  button:active{
+  button:active {
     background-color: var(--primary-text-color);
     color: var(--bg-color);
     border-radius: 1.5rem;
     border: none;
   }
+  .is-active {
+    background-color: var(--primary-text-color);
+    color: var(--bg-color);
+  }
 </style>
 
 <script>
-/*    document.getElementById("button").addEventListener("toggle", function() {
+  /*      document.getElementById(".da").addEventListener("toggle", function() {
     this.classList.add("active");
 });
 
-document.getElementById("button").addEventListener("toggle, function() {
-    this.classList.remove("active"); }*/
+document.getElementById(".da").addEventListener("toggle", function(){
+    this.classList.remove("active")}); */
 
+  document.querySelector(".da").addEventListener("toggle", function () {
+    this.classList.add("active");
+  });
 
+  document.querySelector(".da").addEventListener("toggle", function () {
+    this.classList.remove("active");
+  });
 </script>
