@@ -104,21 +104,50 @@ const { h3 } = Astro.props;
   }
 
   article {
-    padding-bottom: 200px;
+    padding-bottom: 500px;
   }
 
   /*   ---------media q----------- */
+
+  @media screen and (max-width: 1100px) {
+    h1 {
+      font-size: 65px;
+    }
+    h2 {
+      font-size: 50px;
+    }
+
+    h3 {
+      font-size: 40px;
+    }
+  }
+
+  @media screen and (max-width: 800px) {
+    h1 {
+      font-size: 50px;
+    }
+
+    h2 {
+      font-size: 40px;
+    }
+
+    h3 {
+      font-size: 30px;
+    }
+  }
   @media screen and (max-width: 700px) {
     h1 {
       font-size: xx-large;
-      padding-top: 250px;
+      padding-top: 100px;
     }
     h2 {
-      font-size: small;
+      font-size: large;
+      padding-top: 30px;
     }
 
     h3 {
       font-size: smaller;
+      padding-top: 170px;
     }
     .bg_container {
       position: relative;
