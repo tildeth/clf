@@ -6,7 +6,7 @@ import Sprog_knap from "./Sprog_knap.astro";
 
 <header id="descNav">
   <nav class="flexNav">
-    <a href="/"><img src="/icon/Logo.svg" alt="Logo" /></a>
+    <a href="/" class="logo"><img src="/icon/Logo.svg" alt="Logo" /></a>
     <ul class="flexUl">
       <li data-link="/"><Knap text="SAMARBEJDE" /></li>
       <li data-link="ruter"><Knap text="RUTER" /></li>
@@ -58,6 +58,25 @@ import Sprog_knap from "./Sprog_knap.astro";
   .flexNav {
     display: flex;
     gap: 16%;
+  }
+
+  .logo {
+    position: fixed;
+    top: 20px;
+    left: 30px;
+  }
+
+  .flexUl {
+    position: fixed;
+    top: 10px;
+    margin-bottom: 100px;
+    position: center;
+  }
+
+  .grid {
+    position: fixed;
+    top: 20px;
+    right: 100px;
   }
 
   /*   --------media q------ */
