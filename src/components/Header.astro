@@ -2,13 +2,14 @@
 import "../styles/style.css";
 import Knap from "../components/Knap.astro";
 import Sprog_knap from "./Sprog_knap.astro";
+const ThePageWeAreOn = new URL(Astro.request.url).pathname;
 ---
 
 <header id="descNav">
   <nav class="flexNav">
     <a href="/"><img src="/icon/Logo.svg" alt="Logo" /></a>
     <ul class="flexUl">
-      <li data-link="/"><Knap text="SAMARBEJDE" /></li>
+      <li><Knap text="SAMARBEJDE" /></li>
       <li data-link="ruter"><Knap text="KORT" /></li>
       <li data-link="program">
         <Knap text="PROGRAM" />
@@ -68,7 +69,7 @@ import Sprog_knap from "./Sprog_knap.astro";
 </style>
 
 <script>
-  console.log(
+  /*   console.log(
     "LOcation",
     window.location.href.substring(window.location.href.lastIndexOf("/") + 1)
   );
@@ -89,6 +90,6 @@ import Sprog_knap from "./Sprog_knap.astro";
     location.href = denDerErTrykketPaa.dataset.link;
     denDerErTrykketPaa.querySelector("button .inner").style.background =
       "linear-gradient(to left, #02b3b1, #1d87c9, #8a60f4, #d851ac, #ce4984, #e7525d)";
-  }
+  } */
 </script>
 //var(--button-active)
