@@ -1,0 +1,36 @@
+---
+export async function getStaticPaths() {
+    const data = await fetch("https://kffcbwrcxxuhowdxhsie.supabase.co",
+    {
+        method: "GET",
+        headers: {
+            apikey:
+            "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImtmZmNid3JjeHh1aG93ZHhoc2llIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTA3NjU0OTcsImV4cCI6MjAyNjM0MTQ5N30.OEn20IXE7GiqVuiss_Di2sNjpDGwMbCS_hC_B8qSZGM"
+        },
+    }).then(response => response.json());
+
+   return data.map((post) => {
+    return{
+        params: {id:post.id},
+        props: {post},
+    };
+   }) ;
+     
+};
+
+
+
+---
+<a href='program/${data.slug}'>
+<article>
+    <h2>{data.title}</h2>
+    <div>{data.image}</div>
+    <h3>{data.artist}</h3>
+    <h3>{data.location}</h3>
+    <h3>{data.description}</h3>
+    <h3>{data.light}</h3>
+    <h3>{data.music}</h3>
+    <h3>{data.link}</h3>
+    <h3>{data.credit}</h3>
+</article>
+</a>
