@@ -12,7 +12,8 @@ import Footer_mobile from "../components/Footer_mobile.astro";
 import Topknap from "../components/Topknap.astro";
 import TopknapMobile from "../components/Topknap_mobile.astro";
 import "../../layouts/main_layout.astro"
----<html lang="da">
+---
+<html lang="da">
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -21,9 +22,10 @@ import "../../layouts/main_layout.astro"
 
     <title>Forside</title>
   </head>
- 
+ <header id="toppen">
     <Header/>
     <Header_mobile />
+  </header>
     <Nyhed />
     <Bg_icon
       h1="Copenhagen Lightfestival"

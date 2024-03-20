@@ -1,4 +1,4 @@
-<section id="deskFooter" class="flex">
+<section id="deskFooter" class="grid">
   <div>
     <h3>Kontakt</h3>
     <a href="">info@copenhagenlightfestival.org</a>
@@ -24,6 +24,7 @@
         </a>
       </li>
     </ul>
+  </div>
     <div>
       <h3>Hovedsponsorer</h3>
       <a href="">Andre sponsorer</a>
@@ -32,14 +33,16 @@
         alt=""
       /><img src="" alt="" />
     </div>
-  </div>
-  <h4>©COPENHAGEN LIGHT FESTIVAL</h4>
+  
+  
 </section>
+<h4>©COPENHAGEN LIGHT FESTIVAL</h4>
 <style>
-  .flex {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+  .grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1em;
+    
   }
   h3 {
     color: var(--primary-text-color);
@@ -66,9 +69,12 @@
 
   li {
     list-style: none;
+    line-height: 30px;
   }
   .flex_icon a {
     text-decoration: none;
+    
+   margin: 1%;
   }
   .insta {
     background: url("icon/icon_instagram.svg") no-repeat;
