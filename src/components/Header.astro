@@ -2,22 +2,47 @@
 import "../styles/style.css";
 import Knap from "../components/Knap.astro";
 import Sprog_knap from "./Sprog_knap.astro";
+const ThePageWeAreOn = new URL(Astro.request.url).pathname;
+console.log("ThePageWeAreOn", ThePageWeAreOn);
 ---
 
 <header id="descNav">
-  <nav class="flexNav">
-    <a href="/"><img src="/icon/Logo.svg" alt="Logo" /></a>
-    <ul class="flexUl">
-      <li data-link="/"><Knap text="SAMARBEJDE" /></li>
-      <li data-link="ruter"><Knap text="RUTER" /></li>
-      <li data-link="program">
-        <Knap text="PROGRAM" />
+  <nav>
+    <a href="/" class="logo"><img src="/icon/Logo.svg" alt="Logo" /></a>
+    <ul>
+      <li>
+        <a href="samarbejde"
+          ><Knap
+            text="SAMARBEJDE"
+            active={ThePageWeAreOn === "/samarbejde"}
+          /></a
+        >
       </li>
-      <li data-link="/"><a href="/"><Knap text="OM OS" /></a></li>
-      <li data-link="/"><a href="/"><Knap text="FOTOKONKURRENCE" /></a></li>
+      <li>
+        <a href="ruter"
+          ><Knap text="RUTER" active={ThePageWeAreOn === "/ruter"} /></a
+        >
+      </li>
+      <li>
+        <a href="program"
+          ><Knap text="PROGRAM" active={ThePageWeAreOn === "/program"} /></a
+        >
+      </li>
+      <li>
+        <a href="omos"
+          ><Knap text="OM OS" active={ThePageWeAreOn === "/omos"} /></a
+        >
+      </li>
+      <li>
+        <a href="foto"
+          ><Knap
+            text="FOTOKONKURRENCE"
+            active={ThePageWeAreOn === "/foto"}
+          /></a
+        >
+      </li>
     </ul>
-
-    <div class="grid">
+    <div class="sprogDato">
       <Sprog_knap />
       <div>February 2 - 25/2024</div>
       <div>København</div>
@@ -26,13 +51,25 @@ import Sprog_knap from "./Sprog_knap.astro";
 </header>
 
 <style>
-  nav {
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    z-index: 100;
+  header {
+    margin: 1rem;
   }
+  nav {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    max-width: 100%;
+  }
+
+  .logo {
+    justify-self: start;
+    align-self: center;
+  }
+
   ul {
+    justify-self: center;
+    align-self: center;
+    display: flex;
+    gap: 1rem;
     list-style: none;
     max-width: fit-content;
     padding: 10px;
@@ -41,41 +78,25 @@ import Sprog_knap from "./Sprog_knap.astro";
     justify-content: center;
     align-items: center;
   }
+
   a {
     font-family: "circular";
     font-size: 16px;
   }
 
-  .grid {
-    display: grid;
-    gap: 0.3rem;
+  .sprogDato {
+    justify-self: end;
+    align-self: center;
+    margin-top: 0.5rem;
   }
-
-  .flexUl {
-    display: flex;
-    gap: 1rem;
-  }
-  .flexNav {
-    display: flex;
-    gap: 16%;
+  .sprogDato div {
+    padding-top: 0.5rem;
   }
 
   /*   --------media q------ */
-  @media screen and (max-width: 700px) {
+  @media screen and (max-width: 1050px) {
     header {
       display: none;
     }
   }
 </style>
-
-<script>
-  document.querySelectorAll(".flexUl li").forEach((item) => {
-    // console.log("ITE", item);
-
-    item.addEventListener("click", klikBtn);
-  });
-  function klikBtn(evt) {
-    console.log("SOMETHING", evt.currentTarget.dataset.link);
-    location.href = evt.currentTarget.dataset.link;
-  }
-</script>

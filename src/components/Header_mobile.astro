@@ -5,31 +5,40 @@ import Burger from "../components/Burger.astro";
 ---
 
 <header id="mobilnav">
-  <nav class="flexNav">
-    <Sprog_knap />
+  <nav>
+    <div class="sprog"><Sprog_knap /></div>
     <a href="/"><img src="/icon/Logo.svg" alt="Logo" /></a>
-    <Burger />
+    <div class="burger"><Burger /></div>
   </nav>
 </header>
 
 <style>
-  nav {
-    justify-content: center;
-    align-items: center;
+  header {
+    margin: 1rem;
   }
-
+  nav {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    max-width: 100%;
+  }
   div {
     font-family: "circular";
     font-size: 22px;
   }
 
-  .flexUl {
-    display: flex;
-    gap: 1rem;
+  .sprog {
+    justify-self: start;
+    align-self: center;
   }
-  .flexNav {
-    display: flex;
-    gap: 11%; /* Dette skal ændres, da det ikke er responsivt */
+
+  a {
+    justify-self: center;
+    align-self: center;
+  }
+
+  .burger {
+    justify-self: end;
+    align-self: center;
   }
 
   #mobilnav {
@@ -37,11 +46,9 @@ import Burger from "../components/Burger.astro";
     z-index: 100;
   }
 
-  @media screen and (min-width: 700px) {
+  @media screen and (min-width: 1050px) {
     #mobilnav {
       display: none;
     }
   }
 </style>
-
-<script></script>
