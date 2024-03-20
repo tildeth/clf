@@ -6,11 +6,10 @@ import Burger from "../components/Burger.astro";
 
 <header id="mobilnav">
   <nav>
-    <Sprog_knap class="sprog" />
+    <div class="sprog"><Sprog_knap /></div>
     <a href="/"><img src="/icon/Logo.svg" alt="Logo" /></a>
-    <Burger />
+    <div class="burger"><Burger /></div>
   </nav>
-  <div></div>
 </header>
 
 <style>
@@ -22,7 +21,6 @@ import Burger from "../components/Burger.astro";
     grid-template-columns: 1fr 2fr 1fr;
     max-width: 100%;
   }
-
   div {
     font-family: "circular";
     font-size: 22px;
@@ -30,14 +28,17 @@ import Burger from "../components/Burger.astro";
 
   .sprog {
     justify-self: start;
+    align-self: center;
   }
-  .flexUl {
-    display: flex;
-    gap: 1rem;
+
+  a {
+    justify-self: center;
+    align-self: center;
   }
-  .flexNav {
-    display: flex;
-    gap: 11%; /* Dette skal ændres, da det ikke er responsivt */
+
+  .burger {
+    justify-self: end;
+    align-self: center;
   }
 
   #mobilnav {
@@ -51,5 +52,3 @@ import Burger from "../components/Burger.astro";
     }
   }
 </style>
-
-<script></script>
