@@ -1,12 +1,13 @@
 ---
 import "../styles/style.css"
+const {data } = Astro.props
 ---
 
 <article class="kcard">
     <div class="kcard_box">
     <img src="../../public/img/1.avif" alt="billede">
     </div>
-    <h3>1.du som i himlene</h3>
+    <h3>{data}</h3>
 </article>
 
 <style>

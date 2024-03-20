@@ -11,6 +11,7 @@ import Header_mobile from "../components/Header_mobile.astro";
 import Single_card from "../components/Single_card.astro";
 
 const { navn } = Astro.props;
+const {data} = Astro.props;
 ---
 
 <html lang="en">
@@ -31,7 +32,18 @@ const { navn } = Astro.props;
 
     <a href="/program">Tilbage til program</a>
     <Single_card />
-
+      <article>
+          <h2>{data.title}</h2>
+          <div>{data.image}</div>
+          <h3>{data.artist}</h3>
+          <h3>{data.location}</h3>
+          <h3>{data.description}</h3>
+          <h3>{data.light}</h3>
+          <h3>{data.music}</h3>
+          <h3>{data.link}</h3>
+          <h3>{data.credit}</h3>
+      </article>
+    
     <Topknap />
     <TopknapMobile />
     <Footer />
