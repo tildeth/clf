@@ -5,9 +5,11 @@
 <article  class="hidden" id="hiddenContent">
   <h2>Tilmeld vores nyhedsbrev</h2>
     <ul>
-      <li> Email <input type="email" placeholder="Skriv din email her">
+      <form>
+      <li> Email <input type="text" placeholder="alan@silje@twisttmann.cat">
       </li>
-      <li class="tilmeld">Tilmeld</li>
+      <li class="tilmeld"><button type="submit">Tilmeld</button></li>
+    </form>
     </ul>
 
   <hr />
@@ -33,6 +35,10 @@
   }
   input{
     background-color: var(--nyhedsbrev);
+  }
+
+  ::placeholder{
+
   }
 
   .hold_dig{
@@ -65,6 +71,10 @@
     
   }
 
+  button{
+    background-color: var(--nyhedsbrev);
+    border-color: var(--nyhedsbrev);
+  }
   div{
     margin-right: 0px;
   }
