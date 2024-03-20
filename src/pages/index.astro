@@ -11,18 +11,18 @@ import Footer from "../components/Footer.astro";
 import Footer_mobile from "../components/Footer_mobile.astro";
 import Topknap from "../components/Topknap.astro";
 import TopknapMobile from "../components/Topknap_mobile.astro";
----
-
-<html lang="da">
+import "../../layouts/main_layout.astro"
+---<html lang="da">
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
+
     <title>Forside</title>
   </head>
-  <body>
-    <Header />
+ 
+    <Header/>
     <Header_mobile />
     <Nyhed />
     <Bg_icon
@@ -51,5 +51,5 @@ import TopknapMobile from "../components/Topknap_mobile.astro";
 
     <Footer />
     <Footer_mobile />
-  </body>
+  
 </html>

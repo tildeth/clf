@@ -152,5 +152,12 @@
   hiddenContent.classList.toggle("hidden"); 
 });
 
+/* burger menu */
+
+document.getElementById("closeButton").addEventListener("click", function() {
+  var hiddenContent = document.getElementById("hiddenContent");
+  hiddenContent.classList.add("hidden"); // Add the 'hidden' class to hide the content when close button is clicked
+});
+
 </script>
 
