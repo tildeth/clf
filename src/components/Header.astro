@@ -11,32 +11,35 @@ console.log("ThePageWeAreOn", ThePageWeAreOn);
     <a href="/"><img src="/icon/Logo.svg" alt="Logo" /></a>
     <ul class="flexUl">
       <li>
-        <a href="/samarbejde"
+        <a href="samarbejde"
           ><Knap
             text="SAMARBEJDE"
             active={ThePageWeAreOn === "/samarbejde"}
-          /></a>
+          /></a
+        >
       </li>
       <li>
         <a href="ruter"
-          ><Knap text="RUTER" active={ThePageWeAreOn === "/ruter"} /></a>
+          ><Knap text="RUTER" active={ThePageWeAreOn === "/ruter"} /></a
+        >
       </li>
       <li>
         <a href="program"
-          ><Knap text="PROGRAM" active={ThePageWeAreOn === "/program"} /></a>
+          ><Knap text="PROGRAM" active={ThePageWeAreOn === "/program"} /></a
+        >
       </li>
       <li>
-        <a href="/omos"></a><Knap
-          text="OM OS"
-          active={ThePageWeAreOn === "/omos"}
-        />
+        <a href="omos"
+          ><Knap text="OM OS" active={ThePageWeAreOn === "/omos"} /></a
+        >
       </li>
       <li>
-        <a href="/foto"
+        <a href="foto"
           ><Knap
             text="FOTOKONKURRENCE"
             active={ThePageWeAreOn === "/foto"}
-          /></a>
+          /></a
+        >
       </li>
     </ul>
     <div class="grid">
@@ -61,9 +64,6 @@ console.log("ThePageWeAreOn", ThePageWeAreOn);
       background-color: var(--bg-overlay);
       justify-content: center;
       align-items: center;
-    }
-    .active .inner {
-      background-color: aqua;
     }
 
     a {
