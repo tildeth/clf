@@ -5,8 +5,8 @@ import Burger from "../components/Burger.astro";
 ---
 
 <header id="mobilnav">
-  <nav class="flexNav">
-    <Sprog_knap />
+  <nav>
+    <Sprog_knap class="sprog"/>
     <a href="/"><img src="/icon/Logo.svg" alt="Logo" /></a>
     <Burger />
   </nav>
@@ -14,9 +14,13 @@ import Burger from "../components/Burger.astro";
 </header>
 
 <style>
+  header {
+    margin: 1rem;
+  }
   nav {
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    max-width: 100%;
   }
 
   div {
@@ -24,6 +28,9 @@ import Burger from "../components/Burger.astro";
     font-size: 22px;
   }
 
+  .sprog{
+    justify-self: start;
+  }
   .flexUl {
     display: flex;
     gap: 1rem;
