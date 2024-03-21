@@ -11,8 +11,22 @@ import Footer from "../components/Footer.astro";
 import Footer_mobile from "../components/Footer_mobile.astro";
 import Topknap from "../components/Topknap.astro";
 import TopknapMobile from "../components/Topknap_mobile.astro";
-import "../../layouts/main_layout.astro"
+import "../../layouts/main_layout.astro";
+
+export async function getStaticPaths() {
+  const data = await fetch(
+    "https://kffcbwrcxxuhowdxhsie.supabase.co/rest/v1/CLF",
+    {
+      method: "GET",
+      headers: {
+        apikey:
+          "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImtmZmNid3JjeHh1aG93ZHhoc2llIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTA3NjU0OTcsImV4cCI6MjAyNjM0MTQ5N30.OEn20IXE7GiqVuiss_Di2sNjpDGwMbCS_hC_B8qSZGM",
+      },
+    }
+  ).then((response) => response.json());
+}
 ---
+
 <html lang="da">
   <head>
     <meta charset="utf-8" />
@@ -22,36 +36,37 @@ import "../../layouts/main_layout.astro"
 
     <title>Forside</title>
   </head>
- <header id="toppen">
-    <Header/>
+  <header id="toppen">
+    <Header />
     <Header_mobile />
   </header>
-    <Nyhed />
-    <Bg_icon
-      h1="Copenhagen Lightfestival"
-      h2="February 2 - 25/2024"
-      h3="Entrance free festival"
-    />
+  <Nyhed />
+  <Bg_icon
+    h1="Copenhagen Lightfestival"
+    h2="February 2 - 25/2024"
+    h3="Entrance free festival"
+  />
 
-    <Card />
-    <Card />
+  <Card />
+  <Card />
 
-    <div>
-      <img src="" alt="" />
-      <h4 class="overskrift">Lys værker</h4>
-      <p>
-        Copenhagen Light Festival er en årligt tilbagevendende festival for lys,
-        der transformerer det stille og kolde vintermørke til en særlig fejring
-        af lyskunst, lysdesign og lysende oplevelser midt i København.
-      </p>
-      <Knap />
-    </div>
+  <div>
+    <img src="" alt="" />
+    <h4>Lys værker</h4>
+    <p>
+      Copenhagen Light Festival er en årligt tilbagevendende festival for lys,
+      der transformerer det stille og kolde vintermørke til en særlig fejring af
+      lyskunst, lysdesign og lysende oplevelser midt i København.
+    </p>
+    <Knap />
+  </div>
 
-    <Topknap />
+  <Topknap />
 
-    <TopknapMobile />
+  <TopknapMobile />
 
-    <Footer />
-    <Footer_mobile />
-  
+  <Footer />
+  <Footer_mobile />
+
+
 </html>

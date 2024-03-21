@@ -1,53 +1,54 @@
 ---
-import "../styles/style.css"
+import "../styles/style.css";
 import Karruselcard from "./Karruselcard.astro";
+const data = await fetch(
+  "https://kffcbwrcxxuhowdxhsie.supabase.co/rest/v1/CLF",
+  {
+    method: "GET",
+    headers: {
+      apikey:
+        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImtmZmNid3JjeHh1aG93ZHhoc2llIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTA3NjU0OTcsImV4cCI6MjAyNjM0MTQ5N30.OEn20IXE7GiqVuiss_Di2sNjpDGwMbCS_hC_B8qSZGM",
+    },
+  }
+).then((res) => res.json());
 ---
 
 <div class="carousel-container">
-    <div class="prev" onclick="prevSlide()">&#10094;</div>
-    <div class="carousel">
-      <div class="carousel-inner">
-        <Karruselcard></Karruselcard>
-        <Karruselcard></Karruselcard>
-        <Karruselcard></Karruselcard>
-        <Karruselcard></Karruselcard>
-        <Karruselcard></Karruselcard>
-        <Karruselcard></Karruselcard>
-        <Karruselcard></Karruselcard>
-        <Karruselcard></Karruselcard>
-        <Karruselcard></Karruselcard>
-        <Karruselcard></Karruselcard>
-      </div>
+  <div class="prev" onclick="prevSlide()">&#10094;</div>
+  <div class="carousel">
+    <div class="carousel-inner">
+      {
+        data.map((single) => {
+          return <Karruselcard data={single} />;
+        })
+      }
     </div>
-    <div class="next" onclick="nextSlide()">&#10095;</div>
   </div>
-  
-  
-  
-  <style>
-    .carousel-container {
-  display: flex;
-  align-items: center;
+  <div class="next" onclick="nextSlide()">&#10095;</div>
+</div>
 
-}
+<style>
+  .carousel-container {
+    display: flex;
+    align-items: center;
+  }
 
-.prev,
-.next {
-  cursor: pointer;
-  font-size: 24px;
-  padding: 1%;
-}
+  .prev,
+  .next {
+    cursor: pointer;
+    font-size: 24px;
+    padding: 1%;
+  }
 
-.carousel {
-  flex: 1;
-  overflow: hidden;
-}
+  .carousel {
+    flex: 1;
+    overflow: hidden;
+  }
 
-.carousel-inner {
-  display: flex;
-}
-
-  </style>
+  .carousel-inner {
+    display: flex;
+  }
+</style>
 
 <!-- <script>
     const carouselInner = document.querySelector('.carousel-inner');
@@ -70,27 +71,26 @@ import Karruselcard from "./Karruselcard.astro";
   </script> -->
 
 <script>
-   const carouselInner = document.querySelector('.carousel-inner');
-let counter = 0;
+  const carouselInner = document.querySelector(".carousel-inner");
+  let counter = 0;
 
-function nextSlide() {
-  counter++;
-  if (counter > 9) counter = 0;
-  carouselInner.style.transform = `translateX(-${counter * 110}px)`; /* Juster bredden af kortet + margen efter behov */
-}
-
-function prevSlide() {
-  counter--;
-  if (counter < 0) counter = 9;
-  carouselInner.style.transform = `translateX(-${counter * 110}px)`; /* Juster bredden af kortet + margen efter behov */
-}
-
-carouselInner.addEventListener('wheel', function(event) {
-  if (event.deltaY > 0) {
-    nextSlide();
-  } else {
-    prevSlide();
+  function nextSlide() {
+    counter++;
+    if (counter > 9) counter = 0;
+    carouselInner.style.transform = `translateX(-${counter * 110}px)`; /* Juster bredden af kortet + margen efter behov */
   }
-});
-  </script>
-  
+
+  function prevSlide() {
+    counter--;
+    if (counter < 0) counter = 9;
+    carouselInner.style.transform = `translateX(-${counter * 110}px)`; /* Juster bredden af kortet + margen efter behov */
+  }
+
+  carouselInner.addEventListener("wheel", function (event) {
+    if (event.deltaY > 0) {
+      nextSlide();
+    } else {
+      prevSlide();
+    }
+  });
+</script>
