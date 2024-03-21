@@ -24,37 +24,66 @@ import MapMenu from "../components/MapMenu.astro";
     <Header_mobile />
     <Bg_icon h1="Ruter" />
     <Nyhed />
-    <MapMenu text="Gåture"/>
+    <MapMenu text="Gåture" />
 
-    <h2>Gåruter</h2>
-    <h3>De korte ruter</h3>
-    <!--   <Kort />
+    <section>
+      <h2>Gåruter</h2>
+      <h3>De korte ruter</h3>
+      <div>
+        <img src="img/kort1.avif" alt="kort rute 1" />
+        <img src="img/kort2.avif" alt="kort rute 2" />
+      </div>
+      <!--   <Kort />
     <Kort /> -->
 
-    <h3>De mellemlange ruter</h3>
-    <!--   <Kort />
+      <h3>De mellemlange ruter</h3>
+      <div>
+        <img src="img/mellang2.avif" alt="Mellem rute 1" />
+        <img src="img/mellang2 (1).avif" alt="Mellem rute 2" />
+      </div>
+      <!--   <Kort />
     <Kort /> -->
 
-    <h3>De lange ruter</h3>
-    <!--  <Kort />
+      <h3>De lange ruter</h3>
+      <div>
+        <img src="img/lang1.avif" alt="kort rute 1" />
+        <img src="img/lang1.avif" alt="kort rute 2" />
+      </div>
+      <!--  <Kort />
+    <Kort /> -->
+    </section>
+    <section>
+      <h2>Cykelruter</h2>
+      <h3>De korte ruter</h3>
+      <div>
+        <img src="img/cykel1.avif" alt="Cykel rute 1" />
+        <img src="img/cykel2.avif" alt="Cykel rute 2" />
+      </div>
+      <!--   <Kort />
     <Kort /> -->
 
-    <h2>Cykelruter</h2>
-    <h3>De korte ruter</h3>
-    <!--   <Kort />
+      <h3>De mellemlange ruter</h3>
+      <div>
+        <img src="img/mellang2.avif" alt="Mellem rute 1" />
+        <img src="img/mellang2 (1).avif" alt="Mellem rute 2" />
+      </div>
+      <!-- <Kort />
     <Kort /> -->
 
-    <h3>De mellemlange ruter</h3>
-    <!-- <Kort />
+      <h3>De lange ruter</h3>
+      <div>
+        <img src="img/lang1.avif" alt="kort rute 1" />
+        <img src="img/lang1.avif" alt="kort rute 2" />
+      </div>
+      <!--    <Kort />
     <Kort /> -->
+    </section>
 
-    <h3>De lange ruter</h3>
-    <!--    <Kort />
-    <Kort /> -->
-
-    <h2>Kort over hele området</h2>
-    <!--   <Kort /> -->
-
+    <section>
+      <h2>Kort over hele området</h2>
+      <img id="stortKort" src="img/stort kort.avif" alt="Stort kort" />
+      <!--   <Kort /> -->
+    </section>
     <Topknap />
     <TopknapMobile />
 
@@ -62,3 +91,26 @@ import MapMenu from "../components/MapMenu.astro";
     <Footer_mobile />
   </body>
 </html>
+
+<style>
+  h2 {
+    font-size: 40px;
+  }
+
+  h3 {
+    font-size: 30px;
+  }
+  section {
+    margin-top: 10rem;
+    margin-left: 3rem;
+  }
+
+  img {
+    border-radius: 25px;
+  }
+
+  #stortKort {
+    max-width: 1000px;
+    margin-left: 20%;
+  }
+</style>

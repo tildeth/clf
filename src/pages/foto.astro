@@ -1,5 +1,5 @@
 ---
-import "../styles/style.css"
+import "../styles/style.css";
 import Header from "../components/Header.astro";
 import Header_mobile from "../components/Header_mobile.astro";
 import Nyhed from "../components/Nyhed.astro";
@@ -22,14 +22,22 @@ import TopknapMobile from "../components/Topknap_mobile.astro";
     <Header />
     <Header_mobile />
     <Nyhed />
-    <Bg_icon
-      h1="Fotokonkurrence"
-    />
+    <Bg_icon h1="Fotokonkurrence" />
 
-    <Topknap />
+    <div id="tiltoppen">
+      <Topknap />
+    </div>
     <TopknapMobile />
 
     <Footer />
     <Footer_mobile />
   </body>
 </html>
+
+<style>
+  #tiltoppen {
+    max-width: fit-content;
+    margin-top: -10rem;
+    margin-bottom: 5rem;
+  }
+</style>
