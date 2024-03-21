@@ -23,6 +23,8 @@ const data = await fetch(
     },
   }
 ).then((response) => response.json());
+console.log(data);
+
 // }
 ---
 
@@ -48,10 +50,10 @@ const data = await fetch(
 
   <div class="grid1_1">
     {
-      data.map((image) => {
-        if (image.slog === "oe" || image.slog === "gaia") {
-          return <Card data={image} />;
-          return <Card data={overskrift} />;
+      data.map((installation) => {
+        if (installation.slog === "oe" || installation.slog === "gaia") {
+          return <Card data={installation} />;
+          // return <Card data={overskrift} />;
         }
       })
     }
