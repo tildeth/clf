@@ -14,12 +14,13 @@ export async function getStaticPaths() {
   return data.map((single) => {
     return {
       params: { slog: single.slog },
-      props: { myData: single },
+      props: { single },
     };
   });
 }
 
-const { myData } = Astro.props;
+const { single } = Astro.props;
+console.log("single er", single);
 
 import Header from "../../components/Header.astro";
 import Nyhed from "../../components/Nyhed.astro";
@@ -46,25 +47,25 @@ import "../../styles/style.css";
     <Header_mobile />
     <Nyhed />
 
-    <Bg_icon h1={myData.title} />
+    <!-- <Bg_icon h1={myData.title} /> -->
 
     <a href="/program">Tilbage til program</a>
     <section class="grid_1-5-1-4-1">
-      <img src={myData.image} alt="billede" />
+      <img src={single.image} alt="billede" />
       <article>
-        <p><strong>Af:</strong>{myData.artist}</p>
-        <p><strong>Hvor:</strong> {myData.location}</p>
+        <p><strong>Af:</strong>{single.artist}</p>
+        <p><strong>Hvor:</strong> {single.location}</p>
         <p>
           <div>
-            {myData.description}
+            {single.description}
           </div>
 
-          <p><strong>Lys:</strong> {myData.light}</p>
-          <p><strong>Musik:</strong> {myData.music}</p>
-          <p><strong>Links:</strong> {myData.link}</p>
+          <p><strong>Lys:</strong> {single.light}</p>
+          <p><strong>Musik:</strong> {single.music}</p>
+          <p><strong>Links:</strong> {single.link}</p>
           <p>
             <strong>Tak til:</strong>
-            {myData.credit}
+            {single.credit}
           </p>
         </p>
       </article>
