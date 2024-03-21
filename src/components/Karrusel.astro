@@ -14,7 +14,7 @@ const data = await fetch(
 ---
 
 <div class="carousel-container">
-  <div class="prev" onclick="prevSlide()">&#10094;</div>
+  <button class="prev" onclick="prevSlide()">&#10094;</button>
   <div class="carousel">
     <div class="carousel-inner">
       {
@@ -24,7 +24,7 @@ const data = await fetch(
       }
     </div>
   </div>
-  <div class="next" onclick="nextSlide()">&#10095;</div>
+  <button class="next" onclick="nextSlide()">&#10095;</button>
 </div>
 
 <style>
@@ -50,47 +50,25 @@ const data = await fetch(
   }
 </style>
 
-<!-- <script>
-    const carouselInner = document.querySelector('.carousel-inner');
-    let counter = 0;
-    const cardWidth = 300; // Bredden af hvert kort
-  
-    function nextSlide() {
-      counter++;
-      if (counter > 9) counter = 0;
-      const translateValue = -counter * (cardWidth + 10); // Juster med margen mellem kortene
-      carouselInner.style.transform = `translateX(${translateValue}px)`;
-    }
-  
-    function prevSlide() {
-      counter--;
-      if (counter < 0) counter = 9;
-      const translateValue = -counter * (cardWidth + 10); // Juster med margen mellem kortene
-      carouselInner.style.transform = `translateX(${translateValue}px)`;
-    }
-  </script> -->
-
 <script>
   const carouselInner = document.querySelector(".carousel-inner");
   let counter = 0;
+  const cardWidth = 310; // Bredden af hvert kort inklusive margen
+
+  document.querySelector(".prev").addEventListener("click", prevSlide);
+  document.querySelector(".next").addEventListener("click", nextSlide);
 
   function nextSlide() {
     counter++;
     if (counter > 9) counter = 0;
-    carouselInner.style.transform = `translateX(-${counter * 110}px)`; /* Juster bredden af kortet + margen efter behov */
+    const translateValue = -counter * cardWidth; // Juster bredden af kortet + margen efter behov
+    carouselInner.style.transform = `translateX(${translateValue}px)`;
   }
 
   function prevSlide() {
     counter--;
     if (counter < 0) counter = 9;
-    carouselInner.style.transform = `translateX(-${counter * 110}px)`; /* Juster bredden af kortet + margen efter behov */
+    const translateValue = -counter * cardWidth; // Juster bredden af kortet + margen efter behov
+    carouselInner.style.transform = `translateX(${translateValue}px)`;
   }
-
-  carouselInner.addEventListener("wheel", function (event) {
-    if (event.deltaY > 0) {
-      nextSlide();
-    } else {
-      prevSlide();
-    }
-  });
 </script>

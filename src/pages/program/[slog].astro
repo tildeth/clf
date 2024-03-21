@@ -30,7 +30,7 @@ import TopknapMobile from "../../components/Topknap_mobile.astro";
 import FooterMobile from "../../components/Footer_mobile.astro";
 import Header_mobile from "../../components/Header_mobile.astro";
 import Single_card from "../../components/Single_card.astro";
-import "../style.css";
+import "../../styles/style.css";
 ---
 
 <html lang="en">
@@ -46,10 +46,29 @@ import "../style.css";
     <Header_mobile />
     <Nyhed />
 
-    <Bg_icon h1="Værker" />
+    <Bg_icon h1={myData.title} />
 
     <a href="/program">Tilbage til program</a>
-    <Single_card />
+    <section class="grid_1-5-1-4-1">
+      <img src={myData.image} alt="billede" />
+      <article>
+        <p><strong>Af:</strong>{myData.artist}</p>
+        <p><strong>Hvor:</strong> {myData.location}</p>
+        <p>
+          <div>
+            {myData.description}
+          </div>
+
+          <p><strong>Lys:</strong> {myData.light}</p>
+          <p><strong>Musik:</strong> {myData.music}</p>
+          <p><strong>Links:</strong> {myData.link}</p>
+          <p>
+            <strong>Tak til:</strong>
+            {myData.credit}
+          </p>
+        </p>
+      </article>
+    </section>
 
     <Topknap />
     <TopknapMobile />
@@ -57,3 +76,33 @@ import "../style.css";
     <FooterMobile />
   </body>
 </html>
+
+<style>
+  strong {
+    color: var(--link-visited);
+  }
+
+  p {
+    max-width: 65ch;
+    color: var(--primary-text-color);
+  }
+
+  div {
+    max-width: 65ch;
+    color: var(--primary-text-color);
+  }
+
+  .grid_1-5-1-4-1 {
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr 4fr 1fr;
+  }
+
+  article {
+    grid-column: 4/5;
+  }
+
+  img {
+    grid-column: 2/3;
+    width: 100%;
+  }
+</style>

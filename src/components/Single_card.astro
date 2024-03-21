@@ -1,11 +1,31 @@
 ---
+/* export async function getStaticPaths() { */
+const data = await fetch(
+  "https://kffcbwrcxxuhowdxhsie.supabase.co/rest/v1/CLF",
+  {
+    method: "GET",
+    headers: {
+      apikey:
+        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImtmZmNid3JjeHh1aG93ZHhoc2llIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTA3NjU0OTcsImV4cCI6MjAyNjM0MTQ5N30.OEn20IXE7GiqVuiss_Di2sNjpDGwMbCS_hC_B8qSZGM",
+    },
+  }
+).then((response) => response.json());
+
+return data.map((single) => {
+  return {
+    params: { slog: single.slog },
+    props: { myData: single },
+  };
+});
+
+const { myData } = Astro.props;
 import "../styles/style.css";
-const { navn } = Astro.props;
-const { data } = Astro.props;
+
+console.log(data);
 ---
 
 <article>
-  <p><strong>Af:</strong> Mani Nikdel (IR/DK)</p>
+  <p><strong>Af:</strong>{data.artist}</p>
   <p><strong>Hvor:</strong> Ved Stranden 14</p>
   <p>
     GAIA er en 3 meter stor installation, som er inspireret af Hoberman
