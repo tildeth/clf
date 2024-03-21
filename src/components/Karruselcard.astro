@@ -25,7 +25,7 @@ const { data } = Astro.props;
     width: 300px;
     height: 450px;
     overflow: hidden;
-    padding: 1%;
+    padding: 0;
     margin: 10px;
   }
   .overlay {
@@ -55,12 +55,15 @@ const { data } = Astro.props;
     width: 300px;
     height: 300px;
     overflow: hidden;
-    border-radius: 2rem;
+
     position: relative;
   }
   .kcard img {
+    position: absolute;
     width: auto;
     height: 300px;
+    top: -11%;
+    left: -50%;
   }
   h3 {
     margin: 2%;
@@ -70,13 +73,13 @@ const { data } = Astro.props;
     text-shadow: 0 0 15px rgba(255, 255, 255, 0.7);
     color: var(--primary-text-color);
   }
-
-  a {
-    color: var(--primary-text-color);
-  }
-  a:hover {
+  h3:hover {
     background: var(--link-hover);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+  }
+  a {
+    color: var(--primary-text-color);
+    text-decoration: ;
   }
 </style>
