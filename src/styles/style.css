@@ -120,6 +120,11 @@ p {
     grid-row: span 3;
     margin-left: 5rem;
   }
+  #tiltoppen {
+    max-width: fit-content;
+    margin-top: -10rem;
+    margin-bottom: 5rem;
+  }
 }
 
 /* ---------------- MOBIL --------------- */

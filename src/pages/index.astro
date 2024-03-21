@@ -38,52 +38,52 @@ export async function getStaticPaths() {
   </head>
   <header id="toppen">
     <Header />
-    <header id="toppen">
-      <Header />
-      <Header_mobile />
-    </header>
-    <Nyhed />
-    <Bg_icon
-      h1="Copenhagen Lightfestival"
-      h2="February 2 - 25/2024"
-      h3="Entrance free festival"
-    />
+    <Header_mobile />
+  </header>
+  <Nyhed />
+  <Bg_icon
+    h1="Copenhagen Lightfestival"
+    h2="February 2 - 25/2024"
+    h3="Entrance free festival"
+  />
 
-    <div class="grid1_1">
-      {
+  <div class="grid1_1">
+    <!--     {
         data.map((image) => {
           return <Card data={image} />;
         })
-      }
+      } -->
 
-      <!--    <div id="card1">
+    <!--    <div id="card1">
       <Card overskrift="Fotokonkurrence" />
     </div>
     <div id="card">
       <Card overskrift="Ruter" />
     </div> -->
-    </div>
+  </div>
 
-    <div class="grid2_1">
-      <img id="bundimg" src="/img/3.avif" alt="billede" />
-      <div id="bundtext">
-        <h4 class="overskrift">Lys værker</h4>
-        <p>
-          Copenhagen Light Festival er en årligt tilbagevendende festival for
-          lys, der transformerer det stille og kolde vintermørke til en særlig
-          fejring af lyskunst, lysdesign og lysende oplevelser midt i København.
-        </p>
-        <div id="knapF">
-          <Knap text="Læs mere" />
-        </div>
+  <div class="grid2_1">
+    <img id="bundimg" src="/img/3.avif" alt="billede" />
+    <div id="bundtext">
+      <h4 class="overskrift">Lys værker</h4>
+      <p>
+        Copenhagen Light Festival er en årligt tilbagevendende festival for lys,
+        der transformerer det stille og kolde vintermørke til en særlig fejring
+        af lyskunst, lysdesign og lysende oplevelser midt i København.
+      </p>
+      <div id="knapF">
+        <Knap text="Læs mere" />
       </div>
     </div>
+  </div>
 
-    <Topknap />
+  <div id="tiltoppen">
+  <Topknap />
+</div>
 
-    <TopknapMobile />
+  <TopknapMobile />
 
-    <Footer />
-    <Footer_mobile />
-  </header>
+  <Footer />
+  <Footer_mobile />
+
 </html>
