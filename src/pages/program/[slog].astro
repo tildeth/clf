@@ -70,7 +70,9 @@ import "../../styles/style.css";
       </article>
     </section>
 
-    <Topknap />
+    <div id="tiltoppen">
+      <Topknap />
+    </div>
     <TopknapMobile />
     <Footer />
     <FooterMobile />
@@ -104,5 +106,10 @@ import "../../styles/style.css";
   img {
     grid-column: 2/3;
     width: 100%;
+  }
+  #tiltoppen {
+    max-width: fit-content;
+    margin-top: -10rem;
+    margin-bottom: 5rem;
   }
 </style>
