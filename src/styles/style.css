@@ -103,13 +103,3 @@ p {
     max-width: 600px;
   }
 }
-
-
-/* ---------------- MOBIL --------------- */
-/* @media screen and (max-width: 700px) {
-  #deskNav,
-  #deskFooter,
-  #deskTop {
-    display: none;
-  }
-}   */
