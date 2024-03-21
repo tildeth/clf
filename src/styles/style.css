@@ -41,7 +41,7 @@ body {
 h1 {
   font-family: "circular";
   font-size: 90px;
-  color: #f0eeec;
+  color: var(--primary-text-color);
   max-width: 65ch;
   pointer-events: none;
 }
@@ -49,7 +49,7 @@ h1 {
 h2 {
   font-family: "circular";
   font-size: 60px;
-  color: #f0eeec;
+  color: var(--primary-text-color);
   max-width: 65ch;
   pointer-events: none;
 }
@@ -57,7 +57,7 @@ h2 {
 h3 {
   font-family: "circular";
   font-size: 40px;
-  color: #f0eeec;
+  color: var(--primary-text-color);
   max-width: 65ch;
   pointer-events: none;
 }
@@ -65,14 +65,14 @@ h3 {
 h4 {
   font-family: "circular";
   font-size: 30px;
-  color: #f0eeec;
+  color: var(--primary-text-color);
   max-width: 65ch;
 }
 
 p {
   font-family: "circular";
   font-size: 22px;
-  color: #f0eeec;
+  color: var(--primary-text-color);
   line-height: 27px;
   max-width: 65ch;
 }

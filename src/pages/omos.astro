@@ -27,10 +27,52 @@ import OmosMenu from "../components/OmosMenu.astro";
 
     <OmosMenu />
 
-    <Topknap />
+    
+    <section class="grid1_1">
+      <div>
+        <h2>Copenhagen Light Festival</h2>
+        <p>Foreningen Københavns Lysfestival/Copenhagen Light Festival</p>
+        <p>Toldbodgade 39, 1253 København K</p>
+        <p>vat/cvr DK-40793232</p>
+      </div>
+      <div>
+        <h3>Telefon</h3>
+        <p>+45 25556604</p>
+
+        <h3>Mail</h3>
+        <p>info@copenhagenlightfestival.org</p>
+
+        <h3>Socials</h3>
+        <div class="flex_icon">
+          <a href="https://www.instagram.com/cphlightfest/ " class="insta"></a>
+          <a href="https://www.facebook.com/cphlightfest/" class="fb"></a>
+          <a href="https://www.youtube.com/@cphlightfest5395/ " class="yt"></a>
+        </div>
+      </div>
+    </section>
+
+    <div id="tiltoppen">
+      <Topknap />
+    </div>
     <TopknapMobile />
 
     <Footer />
     <Footer_mobile />
   </body>
 </html>
+
+<style>
+  #tiltoppen {
+    max-width: fit-content;
+    margin-top: -10rem;
+    margin-bottom: 5rem;
+  }
+
+  h2{
+    font-size: 40px;
+  }
+
+  h3{
+    font-size: 30px;
+  }
+</style>
