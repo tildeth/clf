@@ -1,11 +1,11 @@
 ---
 import Knap from "../components/Knap.astro";
-const { overskrift } = Astro.props;
-const {data} = Astro.props;
+
+const { data } = Astro.props;
 ---
 
 <article>
-  <h3>{overskrift}</h3>
+  <h3>{data.overskrift}</h3>
   <!-- <img src={Billede} alt="Billede"> -->
   <img src={data.image} alt="billede" />
 
@@ -22,7 +22,7 @@ const {data} = Astro.props;
     align-self: center;
     justify-self: center;
   }
-  img{
+  img {
     max-width: 600px;
   }
 </style>

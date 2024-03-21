@@ -50,7 +50,8 @@ const data = await fetch(
     {
       data.map((image) => {
         if (image.slog === "oe" || image.slog === "gaia") {
-          return <Card data={image} overskrift="Fotokonkurrence" />;
+          return <Card data={image} />;
+          return <Card data={overskrift} />;
         }
       })
     }
