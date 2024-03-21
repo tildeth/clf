@@ -1,19 +1,26 @@
 ---
 import Knap from "../components/Knap.astro";
+const { overskrift } = Astro.props;
+const Billede = Astro.props;
 ---
 
 <article>
-  <h2>Overskift</h2>
-  <img src="../" alt="" />
-  <p>Der skal være et img her:)</p>
+  <h3>{overskrift}</h3>
+  <!-- <img src={Billede} alt="Billede"> -->
+  <img src="{}" alt="">
+  <img src={Billede.image} alt="billede" />
+
   <div><Knap text="Læs Mere" /></div>
 </article>
 
 <style>
-  h2,
+  article {
+    display: grid;
+  }
+  h3,
+  img,
   div {
-    padding-left: 30px;
+    align-self: center;
+    justify-self: center;
   }
 </style>
-
-<!-- EVT mere venstre padding når der kommer et img:))) -->
