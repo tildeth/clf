@@ -29,8 +29,8 @@ const { data } = Astro.props;
 
     <Bg_icon h1="Værker" />
 
-    <a href="/program">Tilbage til program</a>
-    <Single_card />
+    <a href="/program" class="tilbage">Tilbage til program</a>
+    <!--     <Single_card /> -->
 
     <Topknap />
     <TopknapMobile />
@@ -38,3 +38,13 @@ const { data } = Astro.props;
     <FooterMobile />
   </body>
 </html>
+
+<style>
+  .tilbage {
+    color: aqua;
+  }
+
+  a {
+    color: aquamarine;
+  }
+</style>
