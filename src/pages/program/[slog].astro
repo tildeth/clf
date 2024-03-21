@@ -48,16 +48,16 @@ import "../../styles/style.css";
 
     <!-- <Bg_icon h1={myData.title} /> -->
 
-    <a href="/program">Tilbage til program</a>
+    <a href="/program" class="tilbage">Tilbage til program</a>
     <section class="grid_1-5-1-4-1">
       <img src={single.image} alt="billede" />
       <article>
         <p><strong>Af:</strong> {single.artist}</p>
         <p><strong>Hvor:</strong> {single.location}</p>
         <p>
-          <div>
+          <p class="p">
             {single.description}
-          </div>
+          </p>
 
           <p><strong>Lys:</strong> {single.light}</p>
           <p><strong>Musik:</strong> {single.music}</p>
@@ -73,13 +73,29 @@ import "../../styles/style.css";
     <div id="tiltoppen">
       <Topknap />
     </div>
-    <TopknapMobile />
+    <div class="topmob">
+      <TopknapMobile />
+    </div>
+
     <Footer />
     <FooterMobile />
   </body>
 </html>
 
 <style>
+  .topmob {
+    padding-top: 100px;
+  }
+  .p {
+    font-size: 16px;
+  }
+  .tilbage {
+    color: aliceblue;
+    text-decoration: none;
+  }
+  :hover.tilbage {
+    color: var(--link-visited);
+  }
   strong {
     color: var(--link-visited);
   }
@@ -111,5 +127,13 @@ import "../../styles/style.css";
     max-width: fit-content;
     margin-top: -10rem;
     margin-bottom: 5rem;
+  }
+
+  /*  -------------media q ---------- */
+
+  @media screen and (max-width: 1100px) {
+    .grid_1-5-1-4-1 {
+      display: block;
+    }
   }
 </style>
