@@ -4,7 +4,6 @@ import Card from "../components/Card.astro";
 import Header from "../components/Header.astro";
 import Header_mobile from "../components/Header_mobile.astro";
 import Nyhed from "../components/Nyhed.astro";
-import L1 from "../components/lightbeams/L1.astro";
 import Bg_icon from "../components/Bg_icon.astro";
 import Knap from "../components/Knap.astro";
 import Footer from "../components/Footer.astro";
@@ -13,18 +12,18 @@ import Topknap from "../components/Topknap.astro";
 import TopknapMobile from "../components/Topknap_mobile.astro";
 import "../../layouts/main_layout.astro";
 
-export async function getStaticPaths() {
-  const data = await fetch(
-    "https://kffcbwrcxxuhowdxhsie.supabase.co/rest/v1/CLF",
-    {
-      method: "GET",
-      headers: {
-        apikey:
-          "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImtmZmNid3JjeHh1aG93ZHhoc2llIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTA3NjU0OTcsImV4cCI6MjAyNjM0MTQ5N30.OEn20IXE7GiqVuiss_Di2sNjpDGwMbCS_hC_B8qSZGM",
-      },
-    }
-  ).then((response) => response.json());
-}
+// export async function getStaticPaths() {
+const data = await fetch(
+  "https://kffcbwrcxxuhowdxhsie.supabase.co/rest/v1/CLF",
+  {
+    method: "GET",
+    headers: {
+      apikey:
+        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImtmZmNid3JjeHh1aG93ZHhoc2llIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTA3NjU0OTcsImV4cCI6MjAyNjM0MTQ5N30.OEn20IXE7GiqVuiss_Di2sNjpDGwMbCS_hC_B8qSZGM",
+    },
+  }
+).then((response) => response.json());
+// }
 ---
 
 <html lang="da">
@@ -48,11 +47,13 @@ export async function getStaticPaths() {
   />
 
   <div class="grid1_1">
-    <!--     {
-        data.map((image) => {
-          return <Card data={image} />;
-        })
-      } -->
+    {
+      data.map((image) => {
+        if (image.slog === "oe" || image.slog === "gaia") {
+          return <Card data={image} overskrift="Fotokonkurrence" />;
+        }
+      })
+    }
 
     <!--    <div id="card1">
       <Card overskrift="Fotokonkurrence" />
@@ -86,19 +87,21 @@ export async function getStaticPaths() {
   <Footer />
   <Footer_mobile />
 
-
-
   <style>
+    .grid2_1 {
+      margin-top: 10rem;
+    }
     #bundtext {
       display: grid;
-      margin-left: -10rem;
-      margin-right: 2rem;
+      margin-left: -13rem;
+      margin-right: 4rem;
     }
 
     #knapF {
       align-self: center;
       justify-self: center;
       margin-top: 2rem;
+      margin-bottom: 2rem;
     }
 
     #bundimg {
@@ -111,4 +114,6 @@ export async function getStaticPaths() {
       margin-bottom: 5rem;
     }
   </style>
+
+
 </html>
