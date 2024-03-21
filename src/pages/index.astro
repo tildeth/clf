@@ -78,12 +78,37 @@ export async function getStaticPaths() {
   </div>
 
   <div id="tiltoppen">
-  <Topknap />
-</div>
+    <Topknap />
+  </div>
 
   <TopknapMobile />
 
   <Footer />
   <Footer_mobile />
 
+
+
+  <style>
+    #bundtext {
+      display: grid;
+      margin-left: -10rem;
+      margin-right: 2rem;
+    }
+
+    #knapF {
+      align-self: center;
+      justify-self: center;
+      margin-top: 2rem;
+    }
+
+    #bundimg {
+      grid-row: span 3;
+      margin-left: 5rem;
+    }
+    #tiltoppen {
+      max-width: fit-content;
+      margin-top: -10rem;
+      margin-bottom: 5rem;
+    }
+  </style>
 </html>

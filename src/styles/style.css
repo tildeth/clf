@@ -102,30 +102,8 @@ p {
     margin: 2rem;
     max-width: 650px;
   }
-  /* forside */
-
-  #bundtext {
-    display: grid;
-    margin-left: -10rem;
-    margin-right: 2rem;
-  }
-
-  #knapF {
-    align-self: center;
-    justify-self: center;
-    margin-top: 2rem;
-  }
-
-  #bundimg {
-    grid-row: span 3;
-    margin-left: 5rem;
-  }
-  #tiltoppen {
-    max-width: fit-content;
-    margin-top: -10rem;
-    margin-bottom: 5rem;
-  }
 }
+
 
 /* ---------------- MOBIL --------------- */
 /* @media screen and (max-width: 700px) {
