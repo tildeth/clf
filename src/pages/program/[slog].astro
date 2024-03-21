@@ -30,7 +30,6 @@ import Topknap from "../../components/Topknap.astro";
 import TopknapMobile from "../../components/Topknap_mobile.astro";
 import FooterMobile from "../../components/Footer_mobile.astro";
 import Header_mobile from "../../components/Header_mobile.astro";
-import Single_card from "../../components/Single_card.astro";
 import "../../styles/style.css";
 ---
 
@@ -53,7 +52,7 @@ import "../../styles/style.css";
     <section class="grid_1-5-1-4-1">
       <img src={single.image} alt="billede" />
       <article>
-        <p><strong>Af:</strong>{single.artist}</p>
+        <p><strong>Af:</strong> {single.artist}</p>
         <p><strong>Hvor:</strong> {single.location}</p>
         <p>
           <div>
