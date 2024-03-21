@@ -1,5 +1,4 @@
 ---
-import "../styles/style.css";
 import Header from "../components/Header.astro";
 import Nyhed from "../components/Nyhed.astro";
 import Bg_icon from "../components/Bg_icon.astro";
@@ -10,8 +9,9 @@ import FooterMobile from "../components/Footer_mobile.astro";
 import Header_mobile from "../components/Header_mobile.astro";
 import Single_card from "../components/Single_card.astro";
 
+import "../styles/style.css";
 const { navn } = Astro.props;
-const {data} = Astro.props;
+const { data } = Astro.props;
 ---
 
 <html lang="en">
@@ -31,18 +31,7 @@ const {data} = Astro.props;
 
     <a href="/program">Tilbage til program</a>
     <Single_card />
-      <article>
-          <h2>{data.title}</h2>
-          <div>{data.image}</div>
-          <h3>{data.artist}</h3>
-          <h3>{data.location}</h3>
-          <h3>{data.description}</h3>
-          <h3>{data.light}</h3>
-          <h3>{data.music}</h3>
-          <h3>{data.link}</h3>
-          <h3>{data.credit}</h3>
-      </article>
-    
+
     <Topknap />
     <TopknapMobile />
     <Footer />
