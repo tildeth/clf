@@ -81,16 +81,46 @@ p {
   font-size: 40px;
 }
 
-/* /* ------------MEDIA Q------------ */
+/* ------------MEDIA Q------------ */
 
-/* /* ------------------ WEB -------------------- */
-/* @media (min-width: 750px) {
-  #mobilNav,
-  #mobilTop,
-  #footerMobil {
-    display: none;
+/* ------------------ WEB -------------------- */
+@media (min-width: 750px) {
+  body {
+    margin: 2rem;
   }
-} */
+  .grid1_1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .grid2_1 {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+  }
+  img {
+    margin: 2rem;
+    max-width: 650px;
+  }
+  /* forside */
+
+  #bundtext {
+    display: grid;
+    margin-left: -10rem;
+    margin-right: 2rem;
+  }
+
+  #knapF {
+    align-self: center;
+    justify-self: center;
+    margin-top: 2rem;
+  }
+
+  #bundimg {
+    grid-row: span 3;
+    margin-left: 5rem;
+  }
+}
 
 /* ---------------- MOBIL --------------- */
 /* @media screen and (max-width: 700px) {
