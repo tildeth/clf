@@ -3,7 +3,7 @@ import "../styles/style.css";
 const { data } = Astro.props;
 ---
 
-<a href={`program/${data.slog}`}>
+<a href={`/${data.slog}`}>
   <article class="kcard">
     <div class="kcard_box">
       <img src={data.image} alt="billede" />
@@ -80,6 +80,6 @@ const { data } = Astro.props;
   }
   a {
     color: var(--primary-text-color);
-    text-decoration: none ;
+    text-decoration: none;
   }
 </style>
