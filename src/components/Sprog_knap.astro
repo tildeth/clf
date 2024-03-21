@@ -1,8 +1,11 @@
 ---
-const {inactive} = Astro.props;
+const { inactive } = Astro.props;
 ---
 
-<div><button class="da">DA</button><button class="eng">ENG</button></div>
+<div>
+  <button class="da" data-active={inactive}>DA</button>
+  <button class="eng" data-active={inactive}>ENG</button>
+</div>
 
 <style>
   div {
