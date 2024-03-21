@@ -1,14 +1,13 @@
 ---
 import Knap from "../components/Knap.astro";
 const { overskrift } = Astro.props;
-const Billede = Astro.props;
+const data = Astro.props;
 ---
 
 <article>
   <h3>{overskrift}</h3>
   <!-- <img src={Billede} alt="Billede"> -->
-  <img src="{}" alt="">
-  <img src={Billede.image} alt="billede" />
+  <img src={data.image} alt="billede" />
 
   <div><Knap text="Læs Mere" /></div>
 </article>
