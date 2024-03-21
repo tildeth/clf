@@ -26,7 +26,7 @@ import MapMenu from "../components/MapMenu.astro";
     <Nyhed />
     <MapMenu text="Gåture" />
 
-    <section>
+    
       <h2>Gåruter</h2>
       <h3>De korte ruter</h3>
       <div>
@@ -51,7 +51,7 @@ import MapMenu from "../components/MapMenu.astro";
       </div>
       <!--  <Kort />
     <Kort /> -->
-    </section>
+    
     <section>
       <h2>Cykelruter</h2>
       <h3>De korte ruter</h3>
@@ -84,7 +84,9 @@ import MapMenu from "../components/MapMenu.astro";
       <img id="stortKort" src="img/stort kort.avif" alt="Stort kort" />
       <!--   <Kort /> -->
     </section>
-    <Topknap />
+    <div id="tiltoppen">
+      <Topknap />
+    </div>
     <TopknapMobile />
 
     <Footer />
@@ -110,7 +112,15 @@ import MapMenu from "../components/MapMenu.astro";
   }
 
   #stortKort {
-    max-width: 1000px;
-    margin-left: 20%;
+    max-width: 100%;
+    display: grid;
+    justify-self: center;
+    align-self: center;
+  }
+
+  #tiltoppen {
+    max-width: fit-content;
+    margin-top: -10rem;
+    margin-bottom: 5rem;
   }
 </style>
